@@ -1,0 +1,20 @@
+//
+//  PrefixHeader.pch
+//  MALHelp
+//
+//  Created by wangtian on 15-3-5.
+//  Copyright (c) 2015年 wangtian. All rights reserved.
+//
+
+#ifndef MALHelp_PrefixHeader_pch
+#define MALHelp_PrefixHeader_pch
+
+#import <Availability.h>
+
+#ifdef __OBJC__
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#import "MacrosUnit.h"
+#endif
+
+#endif
