@@ -165,5 +165,34 @@ done:
     return [outPutStr lowercaseString];
 }
 
+#pragma mark - 把秒转换为时分秒
+- (MALTime)getMALTime
+{
+    MALTime malTime;
+    
+    int seconds = self.intValue;
+    if (seconds < 60) {
+        
+        malTime.m_hour = 0;
+        malTime.m_minutes = 0;
+        malTime.m_second = seconds;
+    }
+    else{
+        
+        malTime.m_second = seconds % 60;
+        int minute = seconds / 60;
+        int hour = 0;
+        if (minute >= 60) {
+            
+            int tempMinute = minute;
+            minute = minute % 60;
+            hour = tempMinute / 60;
+        }
+        malTime.m_hour = hour;
+        malTime.m_minutes = minute;
+    }
+    
+    return malTime;
+}
 
 @end

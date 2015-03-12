@@ -11,6 +11,13 @@
 
 #define MALStringFormat(fmt,...)  [NSString stringWithFormat:fmt,## __VA_ARGS__];
 
+typedef struct{
+    
+    int m_hour;
+    int m_minutes;
+    int m_second;
+    
+}MALTime;
 
 @interface NSString (MALNSString)
 
@@ -49,4 +56,8 @@
  */
 + (NSString*)getMD5WithData:(NSData *)data;
 
+/**
+ *把秒转换为时分秒
+ */
+- (MALTime)getMALTime;
 @end
