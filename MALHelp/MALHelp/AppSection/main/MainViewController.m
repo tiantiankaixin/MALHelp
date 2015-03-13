@@ -8,6 +8,7 @@
 
 #import "MainViewController.h"
 #import "RuntimeViewController.h"
+#import "ProgressViewController.h"
 
 @interface MainViewController ()
 
@@ -48,6 +49,7 @@
 - (void)configueDataSource
 {
     [self addARowWithTitle:@"runTime demo" andClass:[RuntimeViewController class]];
+    [self addARowWithTitle:@"自定义进度条" andClass:[ProgressViewController class]];
 }
 
 - (void)addARowWithTitle:(NSString *)title andClass:(Class)class
