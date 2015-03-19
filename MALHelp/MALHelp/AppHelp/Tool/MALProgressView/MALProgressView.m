@@ -28,6 +28,14 @@
     return _topView;
 }
 
+- (void)setFrame:(CGRect)frame
+{
+    [super setFrame:frame];
+    _bgView.frame = self.bounds;
+    _topView.frame = self.bounds;
+    [self setM_progress:_m_progress];
+}
+
 + (MALProgressView *)malProgressViewWithRect:(CGRect)rect
 {
     MALProgressView *pro = [[MALProgressView alloc] initWithFrame:rect];
