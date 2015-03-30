@@ -191,8 +191,33 @@ done:
         malTime.m_hour = hour;
         malTime.m_minutes = minute;
     }
-    
     return malTime;
 }
 
+#pragma mark - 把秒转换为  HH:mm:ss 格式字符串
++ (NSString *)timeFromSecond:(unsigned int)seconds
+{
+    unsigned int time = seconds;
+    unsigned int hour = time / 3600;
+    unsigned int min = (time % 3600) / 60;
+    unsigned int sec = time % 60;
+    NSString *timeStr = [NSString stringWithFormat:@"%02d:%02d:%02d", hour, min, sec];
+    return timeStr;
+}
+
+#pragma mark - HH:mm:ss 格式字符串  转换为秒
++ (NSInteger)secondFromTimeString:(NSString *)timeStr
+{
+    NSInteger second;
+    
+    NSArray *timeArray = [timeStr componentsSeparatedByString:@":"];
+    
+    NSInteger hours = [timeArray[0] intValue];
+    NSInteger minutes = [timeArray[1] intValue];
+    NSInteger seconds = [timeArray[2] intValue];
+    
+    second = hours * 3600 + minutes * 60 + seconds;
+    
+    return second;
+}
 @end

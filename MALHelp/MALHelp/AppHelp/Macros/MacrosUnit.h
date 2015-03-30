@@ -11,7 +11,7 @@
 
 //------------------View
 #pragma mark -
-#pragma mark iOS UI
+#pragma mark iOS Frame
 //获取当前screen
 #define IOS_SCREEN  [ UIScreen mainScreen ].bounds
 
@@ -91,6 +91,8 @@
 #define NUM_FLOAT(float) [NSNumber numberWithFloat:float]
 #define NUM_BOOL(bool) [NSNumber numberWithBool:bool]
 
+//++++++NSString
+#define MALStringFormat(fmt,...)  [NSString stringWithFormat:fmt,## __VA_ARGS__];
 
 //-----------------object
 
@@ -102,10 +104,6 @@
 #pragma mark function
 /**
  *  判断id是为空
- *
- *  @param thing <#thing description#>
- *
- *  @return <#return value description#>
  */
 static inline BOOL IsEmpty(id thing) {
     return thing == nil || [thing isEqual:[NSNull null]]
@@ -128,4 +126,37 @@ static inline NSString *StringFromObject(id object) {
 }
 
 //----------------function
+
+
+
+
+
+//----------------thread
+#pragma mark -
+#pragma mark - thread
+/**
+ *  在主线程执行代码
+ *
+ *  @param block 你要执行的代码块
+ *
+ */
+#define HandleOnMainThread(block) dispatch_async(dispatch_get_main_queue(),block);
+
+
+//----------------thread
+
+
+
+
+
+//----------------UIView
+#pragma mark -
+#pragma mark - UIView
+
+//弹出框
+#define AlertViewWithTitleAndMsg(title,msg)  [[[UIAlertView alloc] initWithTitle:title message:msg delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil, nil] show]
+#define AlertViewWithTitle(title)   AlertViewWithTitleAndMsg(title,nil)
+
+//----------------UIView
+
 #endif

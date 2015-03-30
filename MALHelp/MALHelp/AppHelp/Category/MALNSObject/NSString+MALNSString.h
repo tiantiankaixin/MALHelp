@@ -8,9 +8,6 @@
 
 #import <Foundation/Foundation.h>
 
-
-#define MALStringFormat(fmt,...)  [NSString stringWithFormat:fmt,## __VA_ARGS__];
-
 typedef struct{
     
     int m_hour;
@@ -60,4 +57,22 @@ typedef struct{
  *把秒转换为时分秒
  */
 - (MALTime)getMALTime;
+
+/**
+ *  把秒转换为 HH:mm:ss 格式
+ *
+ *@param seconds 总秒数量
+ *
+ *@return HH:mm:ss 格式的字符串
+ */
++ (NSString *)timeFromSecond:(unsigned int)seconds;
+
+/**
+ *  把HH:mm:ss格式的时间转换为秒
+ *
+ *  @param timeStr HH:mm:ss 格式的时间
+ *
+ *  @return 总秒数
+ */
++ (NSInteger)secondFromTimeString:(NSString *)timeStr;
 @end

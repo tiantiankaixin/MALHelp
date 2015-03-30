@@ -58,6 +58,7 @@
 		681343881AB2B14F001037A6 /* ProgressViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgressViewController.h; sourceTree = "<group>"; };
 		681343891AB2B14F001037A6 /* ProgressViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgressViewController.m; sourceTree = "<group>"; };
 		6813438A1AB2B14F001037A6 /* ProgressViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProgressViewController.xib; sourceTree = "<group>"; };
+		68D44A381AC826E900DF3D04 /* 常用类库清单.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "常用类库清单.h"; sourceTree = "<group>"; };
 		68E769081AA9350200DBED40 /* NSObject+MALRunTime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+MALRunTime.h"; sourceTree = "<group>"; };
 		68E769091AA9350200DBED40 /* NSObject+MALRunTime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MALRunTime.m"; sourceTree = "<group>"; };
 		68E7690C1AA9376800DBED40 /* MALStaticClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MALStaticClass.h; sourceTree = "<group>"; };
@@ -125,6 +126,7 @@
 		68038C0E1AA8265000CBE776 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				68D44A381AC826E900DF3D04 /* 常用类库清单.h */,
 				68038C0F1AA8265000CBE776 /* Info.plist */,
 				68038C101AA8265000CBE776 /* main.m */,
 				68038C501AA8324300CBE776 /* PrefixHeader.pch */,
