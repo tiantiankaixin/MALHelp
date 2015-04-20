@@ -18,4 +18,9 @@
 
 4、Masonry    autoLayout
 
+5、ios-scratch-n-see  刮奖效果
+https://github.com/moqod/iOS-Scratch-n-See
+
+6、TPKeyboardAvoiding    用户键盘弹出自动计算高度，进行屏幕滚动操作。
+
 #endif

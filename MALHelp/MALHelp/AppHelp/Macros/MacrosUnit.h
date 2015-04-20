@@ -92,8 +92,10 @@
 #define NUM_BOOL(bool) [NSNumber numberWithBool:bool]
 
 //++++++NSString
-#define MALStringFormat(fmt,...)  [NSString stringWithFormat:fmt,## __VA_ARGS__];
+#define MALStringFormat(fmt,...)  [NSString stringWithFormat:fmt,## __VA_ARGS__]
 
+//弱指针
+#define WeakSelf(ws) __weak __typeof(&*self) ws = self
 //-----------------object
 
 

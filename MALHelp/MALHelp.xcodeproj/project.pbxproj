@@ -17,6 +17,7 @@
 		681343801AB2B073001037A6 /* MALProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6813437F1AB2B073001037A6 /* MALProgressView.m */; };
 		6813438B1AB2B14F001037A6 /* ProgressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 681343891AB2B14F001037A6 /* ProgressViewController.m */; };
 		6813438C1AB2B14F001037A6 /* ProgressViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6813438A1AB2B14F001037A6 /* ProgressViewController.xib */; };
+		681999FE1ADB8A0B001FAE3C /* DeviceInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 681999FD1ADB8A0B001FAE3C /* DeviceInfo.m */; };
 		68E7690A1AA9350200DBED40 /* NSObject+MALRunTime.m in Sources */ = {isa = PBXBuildFile; fileRef = 68E769091AA9350200DBED40 /* NSObject+MALRunTime.m */; };
 		68E769111AA9376800DBED40 /* TestClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 68E7690E1AA9376800DBED40 /* TestClass.m */; };
 		68E769121AA9376800DBED40 /* TestClassTwo.m in Sources */ = {isa = PBXBuildFile; fileRef = 68E769101AA9376800DBED40 /* TestClassTwo.m */; };
@@ -58,6 +59,8 @@
 		681343881AB2B14F001037A6 /* ProgressViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgressViewController.h; sourceTree = "<group>"; };
 		681343891AB2B14F001037A6 /* ProgressViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgressViewController.m; sourceTree = "<group>"; };
 		6813438A1AB2B14F001037A6 /* ProgressViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProgressViewController.xib; sourceTree = "<group>"; };
+		681999FC1ADB8A0B001FAE3C /* DeviceInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeviceInfo.h; sourceTree = "<group>"; };
+		681999FD1ADB8A0B001FAE3C /* DeviceInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeviceInfo.m; sourceTree = "<group>"; };
 		68D44A381AC826E900DF3D04 /* 常用类库清单.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "常用类库清单.h"; sourceTree = "<group>"; };
 		68E769081AA9350200DBED40 /* NSObject+MALRunTime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+MALRunTime.h"; sourceTree = "<group>"; };
 		68E769091AA9350200DBED40 /* NSObject+MALRunTime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MALRunTime.m"; sourceTree = "<group>"; };
@@ -196,6 +199,8 @@
 				68038C581AA83B9100CBE776 /* NSString+MALNSString.m */,
 				68E769081AA9350200DBED40 /* NSObject+MALRunTime.h */,
 				68E769091AA9350200DBED40 /* NSObject+MALRunTime.m */,
+				681999FC1ADB8A0B001FAE3C /* DeviceInfo.h */,
+				681999FD1ADB8A0B001FAE3C /* DeviceInfo.m */,
 			);
 			path = MALNSObject;
 			sourceTree = "<group>";
@@ -382,6 +387,7 @@
 				68038C371AA8268600CBE776 /* AppDelegate.m in Sources */,
 				68E769171AA937AC00DBED40 /* RuntimeViewController.m in Sources */,
 				68E769121AA9376800DBED40 /* TestClassTwo.m in Sources */,
+				681999FE1ADB8A0B001FAE3C /* DeviceInfo.m in Sources */,
 				6813438B1AB2B14F001037A6 /* ProgressViewController.m in Sources */,
 				68E7691D1AA9387E00DBED40 /* MainViewController.m in Sources */,
 				68038C111AA8265000CBE776 /* main.m in Sources */,
