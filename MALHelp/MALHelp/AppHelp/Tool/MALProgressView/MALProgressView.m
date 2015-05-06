@@ -68,7 +68,7 @@
 {
     if (m_progress > 1.0 || m_progress < 0.0) {
         
-        NSLog(@"超过范围了");
+        Log(@"超过范围了");
         return;
     }
     _m_progress = m_progress;

@@ -20,6 +20,7 @@
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor = [UIColor whiteColor];
     
+    [self doSomethingForTest];
     [self setUpMainViewController];
     
     [self.window makeKeyAndVisible];
@@ -29,6 +30,11 @@
 - (void)setUpMainViewController
 {
     self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:[[MainViewController alloc] init]];
+}
+
+- (void)doSomethingForTest
+{
+    Log(@"%@",@"log 输出测试");
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

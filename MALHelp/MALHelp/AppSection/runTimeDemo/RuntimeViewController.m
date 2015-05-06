@@ -28,7 +28,7 @@
     TestClassTwo *t1 = [TestClassTwo new];
     TestClassTwo *t2 = [TestClassTwo new];
     t2.testwo = @"123";
-    NSLog(@"%@ %@",t1.testwo,t2.testwo);
+    Log(@"%@ %@",t1.testwo,t2.testwo);
 }
 
 - (void)didReceiveMemoryWarning

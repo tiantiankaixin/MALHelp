@@ -60,6 +60,8 @@
 #define IOS_VERSION_LESS_THAN(v)                 [[[UIDevice currentDevice] systemVersion] floatValue]<v
 #define IOS_VERSION_LESS_THAN_OR_EQUAL_TO(v)     [[[UIDevice currentDevice] systemVersion] floatValue]<=v
 
+//++++++++ 沙盒文件路径
+
 
 
 //-----------------系统信息
@@ -126,6 +128,14 @@ static inline NSString *StringFromObject(id object) {
         return [object description];
     }
 }
+
+//log输出
+#ifndef __OPTIMIZE__
+#define Log(FORMAT,...)  fprintf(stderr,"%s:%d\t%s\n",[[[NSString stringWithUTF8String:__FILE__] lastPathComponent] UTF8String], __LINE__, [[NSString stringWithFormat:FORMAT, ##__VA_ARGS__] UTF8String])
+#else
+#define Log(...)  {}
+#endif
+
 
 //----------------function
 

@@ -62,7 +62,8 @@
         
         _malProgress.m_progress -= 0.1;
     }
-    NSLog(@"====%.2f",nowProgress);
+    nowProgress = _malProgress.m_progress;
+    Log(@"====%.2f",nowProgress);
 }
 
 - (void)didReceiveMemoryWarning
