@@ -29,7 +29,7 @@
     if (_filter == nil)
     {
         _filter = [[GPUImageiOSBlurFilter alloc] init];
-        _filter.blurRadiusInPixels = 1.0f;
+        _filter.blurRadiusInPixels = 5.0f;
     }
     return  _filter;
 }
@@ -48,7 +48,7 @@
 
 - (void)setUpView
 {
-    self.title = @"模糊效果";
+    [self setCenterItemWithTitle:@"模糊效果"];
 }
 
 - (void)setUpFilter

@@ -22,6 +22,10 @@
 		686DF3CE1AFB39DD0069292A /* BlurViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 686DF3CC1AFB39DD0069292A /* BlurViewController.m */; };
 		686DF3CF1AFB39DD0069292A /* BlurViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 686DF3CD1AFB39DD0069292A /* BlurViewController.xib */; };
 		686DF3D31AFB3E3C0069292A /* mohu.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 686DF3D21AFB3E3C0069292A /* mohu.jpg */; };
+		68D69BCA1AFB63470005386B /* CustomBarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 68D69BC71AFB63470005386B /* CustomBarItem.m */; };
+		68D69BCE1AFB63670005386B /* UIViewController+MALNavigation.m in Sources */ = {isa = PBXBuildFile; fileRef = 68D69BCD1AFB63670005386B /* UIViewController+MALNavigation.m */; };
+		68D69BD41AFB68650005386B /* SetFrameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68D69BD21AFB68650005386B /* SetFrameViewController.m */; };
+		68D69BD51AFB68650005386B /* SetFrameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 68D69BD31AFB68650005386B /* SetFrameViewController.xib */; };
 		68E7690A1AA9350200DBED40 /* NSObject+MALRunTime.m in Sources */ = {isa = PBXBuildFile; fileRef = 68E769091AA9350200DBED40 /* NSObject+MALRunTime.m */; };
 		68E769111AA9376800DBED40 /* TestClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 68E7690E1AA9376800DBED40 /* TestClass.m */; };
 		68E769121AA9376800DBED40 /* TestClassTwo.m in Sources */ = {isa = PBXBuildFile; fileRef = 68E769101AA9376800DBED40 /* TestClassTwo.m */; };
@@ -74,6 +78,14 @@
 		686DF3CD1AFB39DD0069292A /* BlurViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BlurViewController.xib; sourceTree = "<group>"; };
 		686DF3D21AFB3E3C0069292A /* mohu.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mohu.jpg; sourceTree = "<group>"; };
 		68D44A381AC826E900DF3D04 /* 常用类库清单.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "常用类库清单.h"; sourceTree = "<group>"; };
+		68D69BC61AFB63470005386B /* CustomBarItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomBarItem.h; sourceTree = "<group>"; };
+		68D69BC71AFB63470005386B /* CustomBarItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomBarItem.m; sourceTree = "<group>"; };
+		68D69BCC1AFB63670005386B /* UIViewController+MALNavigation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+MALNavigation.h"; sourceTree = "<group>"; };
+		68D69BCD1AFB63670005386B /* UIViewController+MALNavigation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+MALNavigation.m"; sourceTree = "<group>"; };
+		68D69BCF1AFB66AA0005386B /* MacrosForProgect.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MacrosForProgect.h; sourceTree = "<group>"; };
+		68D69BD11AFB68650005386B /* SetFrameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetFrameViewController.h; sourceTree = "<group>"; };
+		68D69BD21AFB68650005386B /* SetFrameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetFrameViewController.m; sourceTree = "<group>"; };
+		68D69BD31AFB68650005386B /* SetFrameViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SetFrameViewController.xib; sourceTree = "<group>"; };
 		68E769081AA9350200DBED40 /* NSObject+MALRunTime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+MALRunTime.h"; sourceTree = "<group>"; };
 		68E769091AA9350200DBED40 /* NSObject+MALRunTime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MALRunTime.m"; sourceTree = "<group>"; };
 		68E7690C1AA9376800DBED40 /* MALStaticClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MALStaticClass.h; sourceTree = "<group>"; };
@@ -185,6 +197,7 @@
 			isa = PBXGroup;
 			children = (
 				68E769191AA9386D00DBED40 /* main */,
+				68D69BD01AFB68530005386B /* setFrame */,
 				686DF3CA1AFB39CA0069292A /* mohuxiaoguo */,
 				681343871AB2B142001037A6 /* progressView */,
 				68E769131AA9379700DBED40 /* runTimeDemo */,
@@ -239,6 +252,7 @@
 			isa = PBXGroup;
 			children = (
 				68038C481AA8288400CBE776 /* MacrosUnit.h */,
+				68D69BCF1AFB66AA0005386B /* MacrosForProgect.h */,
 			);
 			path = Macros;
 			sourceTree = "<group>";
@@ -246,6 +260,7 @@
 		68038C491AA82B6600CBE776 /* Tool */ = {
 			isa = PBXGroup;
 			children = (
+				68D69BC51AFB63470005386B /* malNavigation */,
 				6813437D1AB2B073001037A6 /* MALProgressView */,
 				68E7690B1AA9376800DBED40 /* appearance */,
 			);
@@ -295,6 +310,27 @@
 				686DF3D21AFB3E3C0069292A /* mohu.jpg */,
 			);
 			path = image;
+			sourceTree = "<group>";
+		};
+		68D69BC51AFB63470005386B /* malNavigation */ = {
+			isa = PBXGroup;
+			children = (
+				68D69BC61AFB63470005386B /* CustomBarItem.h */,
+				68D69BC71AFB63470005386B /* CustomBarItem.m */,
+				68D69BCC1AFB63670005386B /* UIViewController+MALNavigation.h */,
+				68D69BCD1AFB63670005386B /* UIViewController+MALNavigation.m */,
+			);
+			path = malNavigation;
+			sourceTree = "<group>";
+		};
+		68D69BD01AFB68530005386B /* setFrame */ = {
+			isa = PBXGroup;
+			children = (
+				68D69BD11AFB68650005386B /* SetFrameViewController.h */,
+				68D69BD21AFB68650005386B /* SetFrameViewController.m */,
+				68D69BD31AFB68650005386B /* SetFrameViewController.xib */,
+			);
+			path = setFrame;
 			sourceTree = "<group>";
 		};
 		68E7690B1AA9376800DBED40 /* appearance */ = {
@@ -429,6 +465,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				68038C1F1AA8265000CBE776 /* LaunchScreen.xib in Resources */,
+				68D69BD51AFB68650005386B /* SetFrameViewController.xib in Resources */,
 				686DF3CF1AFB39DD0069292A /* BlurViewController.xib in Resources */,
 				686DF3D31AFB3E3C0069292A /* mohu.jpg in Resources */,
 				68E769181AA937AC00DBED40 /* RuntimeViewController.xib in Resources */,
@@ -487,11 +524,14 @@
 			files = (
 				6847B85A1AFB30F40065972A /* UIView+MALFrame.m in Sources */,
 				686DF3CE1AFB39DD0069292A /* BlurViewController.m in Sources */,
+				68D69BD41AFB68650005386B /* SetFrameViewController.m in Sources */,
 				68038C371AA8268600CBE776 /* AppDelegate.m in Sources */,
+				68D69BCA1AFB63470005386B /* CustomBarItem.m in Sources */,
 				68E769171AA937AC00DBED40 /* RuntimeViewController.m in Sources */,
 				68E769121AA9376800DBED40 /* TestClassTwo.m in Sources */,
 				681999FE1ADB8A0B001FAE3C /* DeviceInfo.m in Sources */,
 				6813438B1AB2B14F001037A6 /* ProgressViewController.m in Sources */,
+				68D69BCE1AFB63670005386B /* UIViewController+MALNavigation.m in Sources */,
 				68E7691D1AA9387E00DBED40 /* MainViewController.m in Sources */,
 				68038C111AA8265000CBE776 /* main.m in Sources */,
 				68038C591AA83B9100CBE776 /* NSString+MALNSString.m in Sources */,

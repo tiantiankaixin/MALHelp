@@ -10,6 +10,7 @@
 #import "RuntimeViewController.h"
 #import "ProgressViewController.h"
 #import "BlurViewController.h"
+#import "SetFrameViewController.h"
 
 @interface MainViewController ()
 
@@ -52,6 +53,7 @@
     [self addARowWithTitle:@"runTime demo" andClass:[RuntimeViewController class]];
     [self addARowWithTitle:@"自定义进度条" andClass:[ProgressViewController class]];
     [self addARowWithTitle:@"模糊效果" andClass:[BlurViewController class]];
+    [self addARowWithTitle:@"简化设置frame代码" andClass:[SetFrameViewController class]];
 }
 
 - (void)addARowWithTitle:(NSString *)title andClass:(Class)class
