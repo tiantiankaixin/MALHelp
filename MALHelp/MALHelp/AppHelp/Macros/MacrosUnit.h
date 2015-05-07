@@ -131,11 +131,14 @@ static inline NSString *StringFromObject(id object) {
 
 //log输出
 #ifndef __OPTIMIZE__
-#define Log(FORMAT,...)  fprintf(stderr,"%s:%d\t%s\n",[[[NSString stringWithUTF8String:__FILE__] lastPathComponent] UTF8String], __LINE__, [[NSString stringWithFormat:FORMAT, ##__VA_ARGS__] UTF8String])
+#define Log(FORMAT,...)  fprintf(stderr,"file：%s\nline：%d\nfunc：%s\noutput：%s\n\n",[[[NSString stringWithUTF8String:__FILE__] lastPathComponent] UTF8String], __LINE__,__func__ ,[[NSString stringWithFormat:FORMAT, ##__VA_ARGS__] UTF8String])
 #else
 #define Log(...)  {}
 #endif
 
+//设置导航栏返回标题
+#define SetBackItemTitle(title)  [self.navigationItem setBackBarButtonItem:[[UIBarButtonItem alloc] initWithTitle:title style:UIBarButtonItemStylePlain target:nil action:nil]]
+#define SetBackItem  SetBackItemTitle(@"返回")
 
 //----------------function
 

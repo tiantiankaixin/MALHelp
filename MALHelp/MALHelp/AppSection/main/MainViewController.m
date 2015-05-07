@@ -9,6 +9,7 @@
 #import "MainViewController.h"
 #import "RuntimeViewController.h"
 #import "ProgressViewController.h"
+#import "BlurViewController.h"
 
 @interface MainViewController ()
 
@@ -50,6 +51,7 @@
 {
     [self addARowWithTitle:@"runTime demo" andClass:[RuntimeViewController class]];
     [self addARowWithTitle:@"自定义进度条" andClass:[ProgressViewController class]];
+    [self addARowWithTitle:@"模糊效果" andClass:[BlurViewController class]];
 }
 
 - (void)addARowWithTitle:(NSString *)title andClass:(Class)class
@@ -77,6 +79,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    SetBackItem;
     [self.navigationController pushViewController:[[self.vcArray[indexPath.row] alloc] init] animated:YES];
 }
 
