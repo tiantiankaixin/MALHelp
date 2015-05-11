@@ -41,12 +41,6 @@
                         <constraint firstAttribute="width" constant="232" id="mws-ll-m2t"/>
                     </constraints>
                     <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="color" keyPath="bgColor">
-                            <color key="value" red="1" green="0.74632185220000002" blue="0.54319653649999999" alpha="1" colorSpace="calibratedRGB"/>
-                        </userDefinedRuntimeAttribute>
-                        <userDefinedRuntimeAttribute type="color" keyPath="topColor">
-                            <color key="value" red="0.93725490199999995" green="0.44705882349999998" blue="0.4549019608" alpha="1" colorSpace="calibratedRGB"/>
-                        </userDefinedRuntimeAttribute>
                         <userDefinedRuntimeAttribute type="number" keyPath="m_progress">
                             <real key="value" value="0.59999999999999998"/>
                         </userDefinedRuntimeAttribute>

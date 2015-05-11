@@ -51,7 +51,7 @@
     if (self = [super initWithCoder:aDecoder])
     {
         [self setUpView];
-        [self configueProgressView];
+        [self configueProgressView];//设置默认值要在initWithCoder之后   awakeFromNib之前
     }
     return self;
 }
@@ -66,7 +66,7 @@
 - (void)configueProgressView
 {
     self.m_progress = 0.5;
-    //[self setBgColor:[UIColor lightGrayColor] topColor:[UIColor blueColor]];
+    [self setBgColor:[UIColor lightGrayColor] topColor:[UIColor blueColor]];
 }
 
 - (void)setUpView
