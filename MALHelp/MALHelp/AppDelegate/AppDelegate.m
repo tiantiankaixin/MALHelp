@@ -32,6 +32,7 @@
     self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:[[MainViewController alloc] init]];
 }
 
+#pragma mark - 做一些测试
 - (void)doSomethingForTest
 {
     Log(@"%@",@"log 输出测试");

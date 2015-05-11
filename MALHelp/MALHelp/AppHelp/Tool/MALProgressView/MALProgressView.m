@@ -36,11 +36,29 @@
     [self setM_progress:_m_progress];
 }
 
+- (instancetype)initWithFrame:(CGRect)frame
+{
+    if (self = [super initWithFrame:frame])
+    {
+        [self setUpView];
+        [self configueProgressView];
+    }
+    return self;
+}
+
+- (id)initWithCoder:(NSCoder *)aDecoder
+{
+    if (self = [super initWithCoder:aDecoder])
+    {
+        [self setUpView];
+        [self configueProgressView];
+    }
+    return self;
+}
+
 + (MALProgressView *)malProgressViewWithRect:(CGRect)rect
 {
     MALProgressView *pro = [[MALProgressView alloc] initWithFrame:rect];
-    [pro setUpView];
-    [pro configueProgressView];
     return pro;
 }
 
@@ -48,7 +66,7 @@
 - (void)configueProgressView
 {
     self.m_progress = 0.5;
-    [self setBgColor:[UIColor lightGrayColor] topColor:[UIColor blueColor]];
+    //[self setBgColor:[UIColor lightGrayColor] topColor:[UIColor blueColor]];
 }
 
 - (void)setUpView
@@ -56,6 +74,27 @@
     self.backgroundColor = [UIColor clearColor];
     [self addSubview:self.bgView];
     [self addSubview:self.topView];
+}
+
+- (void)setBgColor:(UIColor *)bgColor
+{
+    self.bgView.backgroundColor = bgColor;
+}
+
+- (void)setTopColor:(UIColor *)topColor
+{
+    self.topView.backgroundColor = topColor;
+}
+
+- (void)setBgImage:(NSString *)bgImage
+{
+    self.bgView.image = [UIImage imageNamed:bgImage];
+    
+}
+
+- (void)setTopImage:(NSString *)topImage
+{
+    self.topView.image = [UIImage imageNamed:topImage];
 }
 
 - (void)setBgImage:(UIImage *)bgImage topImage:(UIImage *)top
