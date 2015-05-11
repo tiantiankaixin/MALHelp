@@ -11,6 +11,7 @@
 #import "ProgressViewController.h"
 #import "BlurViewController.h"
 #import "SetFrameViewController.h"
+#import "ScrollowVCViewController.h"
 
 @interface MainViewController ()
 
@@ -54,6 +55,7 @@
     [self addARowWithTitle:@"自定义进度条" andClass:[ProgressViewController class]];
     [self addARowWithTitle:@"模糊效果" andClass:[BlurViewController class]];
     [self addARowWithTitle:@"简化设置frame代码" andClass:[SetFrameViewController class]];
+    [self addARowWithTitle:@"滑动切换VC" andClass:[ScrollowVCViewController class]];
 }
 
 - (void)addARowWithTitle:(NSString *)title andClass:(Class)class

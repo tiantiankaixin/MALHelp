@@ -16,7 +16,13 @@
 		681343801AB2B073001037A6 /* MALProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6813437F1AB2B073001037A6 /* MALProgressView.m */; };
 		6813438B1AB2B14F001037A6 /* ProgressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 681343891AB2B14F001037A6 /* ProgressViewController.m */; };
 		6813438C1AB2B14F001037A6 /* ProgressViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6813438A1AB2B14F001037A6 /* ProgressViewController.xib */; };
-		681999FE1ADB8A0B001FAE3C /* DeviceInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 681999FD1ADB8A0B001FAE3C /* DeviceInfo.m */; };
+		6831F4AF1B0055B6002FEF5F /* ControllerScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6831F4AB1B0055B6002FEF5F /* ControllerScrollView.m */; };
+		6831F4B01B0055B6002FEF5F /* MALSegmentControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 6831F4AE1B0055B6002FEF5F /* MALSegmentControl.m */; };
+		6831F4B51B0057F0002FEF5F /* ScrollowVCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6831F4B31B0057F0002FEF5F /* ScrollowVCViewController.m */; };
+		6831F4B61B0057F0002FEF5F /* ScrollowVCViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6831F4B41B0057F0002FEF5F /* ScrollowVCViewController.xib */; };
+		6831F4BA1B005805002FEF5F /* ScrollowVCItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6831F4B81B005805002FEF5F /* ScrollowVCItemViewController.m */; };
+		6831F4BB1B005805002FEF5F /* ScrollowVCItemViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6831F4B91B005805002FEF5F /* ScrollowVCItemViewController.xib */; };
+		6831F4C31B008678002FEF5F /* NSObject+SystemInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 6831F4C21B008678002FEF5F /* NSObject+SystemInfo.m */; };
 		6847B85A1AFB30F40065972A /* UIView+MALFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 6847B8591AFB30F40065972A /* UIView+MALFrame.m */; };
 		6847B85D1AFB31340065972A /* UIView+MALFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = 6847B85C1AFB31340065972A /* UIView+MALFunction.m */; };
 		686DF3CE1AFB39DD0069292A /* BlurViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 686DF3CC1AFB39DD0069292A /* BlurViewController.m */; };
@@ -67,8 +73,18 @@
 		681343881AB2B14F001037A6 /* ProgressViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgressViewController.h; sourceTree = "<group>"; };
 		681343891AB2B14F001037A6 /* ProgressViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgressViewController.m; sourceTree = "<group>"; };
 		6813438A1AB2B14F001037A6 /* ProgressViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProgressViewController.xib; sourceTree = "<group>"; };
-		681999FC1ADB8A0B001FAE3C /* DeviceInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeviceInfo.h; sourceTree = "<group>"; };
-		681999FD1ADB8A0B001FAE3C /* DeviceInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeviceInfo.m; sourceTree = "<group>"; };
+		6831F4AA1B0055B6002FEF5F /* ControllerScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ControllerScrollView.h; sourceTree = "<group>"; };
+		6831F4AB1B0055B6002FEF5F /* ControllerScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ControllerScrollView.m; sourceTree = "<group>"; };
+		6831F4AD1B0055B6002FEF5F /* MALSegmentControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MALSegmentControl.h; sourceTree = "<group>"; };
+		6831F4AE1B0055B6002FEF5F /* MALSegmentControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MALSegmentControl.m; sourceTree = "<group>"; };
+		6831F4B21B0057F0002FEF5F /* ScrollowVCViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScrollowVCViewController.h; sourceTree = "<group>"; };
+		6831F4B31B0057F0002FEF5F /* ScrollowVCViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScrollowVCViewController.m; sourceTree = "<group>"; };
+		6831F4B41B0057F0002FEF5F /* ScrollowVCViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ScrollowVCViewController.xib; sourceTree = "<group>"; };
+		6831F4B71B005805002FEF5F /* ScrollowVCItemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScrollowVCItemViewController.h; sourceTree = "<group>"; };
+		6831F4B81B005805002FEF5F /* ScrollowVCItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScrollowVCItemViewController.m; sourceTree = "<group>"; };
+		6831F4B91B005805002FEF5F /* ScrollowVCItemViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ScrollowVCItemViewController.xib; sourceTree = "<group>"; };
+		6831F4C11B008678002FEF5F /* NSObject+SystemInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SystemInfo.h"; sourceTree = "<group>"; };
+		6831F4C21B008678002FEF5F /* NSObject+SystemInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SystemInfo.m"; sourceTree = "<group>"; };
 		6847B8581AFB30F40065972A /* UIView+MALFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+MALFrame.h"; sourceTree = "<group>"; };
 		6847B8591AFB30F40065972A /* UIView+MALFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MALFrame.m"; sourceTree = "<group>"; };
 		6847B85B1AFB31340065972A /* UIView+MALFunction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+MALFunction.h"; sourceTree = "<group>"; };
@@ -197,6 +213,7 @@
 			isa = PBXGroup;
 			children = (
 				68E769191AA9386D00DBED40 /* main */,
+				6831F4B11B0057D2002FEF5F /* scrllowVC */,
 				68D69BD01AFB68530005386B /* setFrame */,
 				686DF3CA1AFB39CA0069292A /* mohuxiaoguo */,
 				681343871AB2B142001037A6 /* progressView */,
@@ -231,8 +248,8 @@
 				68038C581AA83B9100CBE776 /* NSString+MALNSString.m */,
 				68E769081AA9350200DBED40 /* NSObject+MALRunTime.h */,
 				68E769091AA9350200DBED40 /* NSObject+MALRunTime.m */,
-				681999FC1ADB8A0B001FAE3C /* DeviceInfo.h */,
-				681999FD1ADB8A0B001FAE3C /* DeviceInfo.m */,
+				6831F4C11B008678002FEF5F /* NSObject+SystemInfo.h */,
+				6831F4C21B008678002FEF5F /* NSObject+SystemInfo.m */,
 			);
 			path = MALNSObject;
 			sourceTree = "<group>";
@@ -260,6 +277,8 @@
 		68038C491AA82B6600CBE776 /* Tool */ = {
 			isa = PBXGroup;
 			children = (
+				6831F4A91B0055B6002FEF5F /* ControllerScrollView */,
+				6831F4AC1B0055B6002FEF5F /* MALSegmentControl */,
 				68D69BC51AFB63470005386B /* malNavigation */,
 				6813437D1AB2B073001037A6 /* MALProgressView */,
 				68E7690B1AA9376800DBED40 /* appearance */,
@@ -284,6 +303,37 @@
 				6813438A1AB2B14F001037A6 /* ProgressViewController.xib */,
 			);
 			path = progressView;
+			sourceTree = "<group>";
+		};
+		6831F4A91B0055B6002FEF5F /* ControllerScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				6831F4AA1B0055B6002FEF5F /* ControllerScrollView.h */,
+				6831F4AB1B0055B6002FEF5F /* ControllerScrollView.m */,
+			);
+			path = ControllerScrollView;
+			sourceTree = "<group>";
+		};
+		6831F4AC1B0055B6002FEF5F /* MALSegmentControl */ = {
+			isa = PBXGroup;
+			children = (
+				6831F4AD1B0055B6002FEF5F /* MALSegmentControl.h */,
+				6831F4AE1B0055B6002FEF5F /* MALSegmentControl.m */,
+			);
+			path = MALSegmentControl;
+			sourceTree = "<group>";
+		};
+		6831F4B11B0057D2002FEF5F /* scrllowVC */ = {
+			isa = PBXGroup;
+			children = (
+				6831F4B21B0057F0002FEF5F /* ScrollowVCViewController.h */,
+				6831F4B31B0057F0002FEF5F /* ScrollowVCViewController.m */,
+				6831F4B41B0057F0002FEF5F /* ScrollowVCViewController.xib */,
+				6831F4B71B005805002FEF5F /* ScrollowVCItemViewController.h */,
+				6831F4B81B005805002FEF5F /* ScrollowVCItemViewController.m */,
+				6831F4B91B005805002FEF5F /* ScrollowVCItemViewController.xib */,
+			);
+			path = scrllowVC;
 			sourceTree = "<group>";
 		};
 		686DF3CA1AFB39CA0069292A /* mohuxiaoguo */ = {
@@ -464,6 +514,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6831F4BB1B005805002FEF5F /* ScrollowVCItemViewController.xib in Resources */,
 				68038C1F1AA8265000CBE776 /* LaunchScreen.xib in Resources */,
 				68D69BD51AFB68650005386B /* SetFrameViewController.xib in Resources */,
 				686DF3CF1AFB39DD0069292A /* BlurViewController.xib in Resources */,
@@ -471,6 +522,7 @@
 				68E769181AA937AC00DBED40 /* RuntimeViewController.xib in Resources */,
 				68E7691E1AA9387E00DBED40 /* MainViewController.xib in Resources */,
 				6813438C1AB2B14F001037A6 /* ProgressViewController.xib in Resources */,
+				6831F4B61B0057F0002FEF5F /* ScrollowVCViewController.xib in Resources */,
 				68038C1C1AA8265000CBE776 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -523,22 +575,26 @@
 			buildActionMask = 2147483647;
 			files = (
 				6847B85A1AFB30F40065972A /* UIView+MALFrame.m in Sources */,
+				6831F4AF1B0055B6002FEF5F /* ControllerScrollView.m in Sources */,
 				686DF3CE1AFB39DD0069292A /* BlurViewController.m in Sources */,
 				68D69BD41AFB68650005386B /* SetFrameViewController.m in Sources */,
 				68038C371AA8268600CBE776 /* AppDelegate.m in Sources */,
 				68D69BCA1AFB63470005386B /* CustomBarItem.m in Sources */,
+				6831F4B51B0057F0002FEF5F /* ScrollowVCViewController.m in Sources */,
 				68E769171AA937AC00DBED40 /* RuntimeViewController.m in Sources */,
 				68E769121AA9376800DBED40 /* TestClassTwo.m in Sources */,
-				681999FE1ADB8A0B001FAE3C /* DeviceInfo.m in Sources */,
 				6813438B1AB2B14F001037A6 /* ProgressViewController.m in Sources */,
 				68D69BCE1AFB63670005386B /* UIViewController+MALNavigation.m in Sources */,
 				68E7691D1AA9387E00DBED40 /* MainViewController.m in Sources */,
 				68038C111AA8265000CBE776 /* main.m in Sources */,
 				68038C591AA83B9100CBE776 /* NSString+MALNSString.m in Sources */,
+				6831F4B01B0055B6002FEF5F /* MALSegmentControl.m in Sources */,
 				681343801AB2B073001037A6 /* MALProgressView.m in Sources */,
 				68E7690A1AA9350200DBED40 /* NSObject+MALRunTime.m in Sources */,
+				6831F4C31B008678002FEF5F /* NSObject+SystemInfo.m in Sources */,
 				6847B85D1AFB31340065972A /* UIView+MALFunction.m in Sources */,
 				68E769111AA9376800DBED40 /* TestClass.m in Sources */,
+				6831F4BA1B005805002FEF5F /* ScrollowVCItemViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7531" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7531"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ScrollowVCViewController">
+            <connections>
+                <outlet property="controllerScrollView" destination="aZE-Xa-jEP" id="Sue-kJ-Dr1"/>
+                <outlet property="segView" destination="57C-yL-Ikm" id="Rcc-OR-PQp"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="57C-yL-Ikm" userLabel="segView">
+                    <rect key="frame" x="0.0" y="64" width="320" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="57C-yL-Ikm" secondAttribute="height" multiplier="8:1" id="htj-6O-PMq"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aZE-Xa-jEP" customClass="ControllerScrollView">
+                    <rect key="frame" x="0.0" y="104" width="320" height="464"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="aZE-Xa-jEP" secondAttribute="bottom" id="7ay-Sq-kay"/>
+                <constraint firstAttribute="trailing" secondItem="57C-yL-Ikm" secondAttribute="trailing" id="HDz-pF-hdb"/>
+                <constraint firstAttribute="trailing" secondItem="aZE-Xa-jEP" secondAttribute="trailing" id="OKJ-oj-Ofk"/>
+                <constraint firstItem="aZE-Xa-jEP" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="a4m-mD-hgj"/>
+                <constraint firstItem="57C-yL-Ikm" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="jNK-p5-vtt"/>
+                <constraint firstItem="57C-yL-Ikm" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="jcZ-nt-mog"/>
+                <constraint firstItem="aZE-Xa-jEP" firstAttribute="top" secondItem="57C-yL-Ikm" secondAttribute="bottom" id="vpf-Ol-RQy"/>
+            </constraints>
+            <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+        </view>
+    </objects>
+</document>
