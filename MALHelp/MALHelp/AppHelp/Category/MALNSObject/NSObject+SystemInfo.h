@@ -42,4 +42,10 @@ typedef struct{
  */
 + (M_RGBA)mrgbaWithR:(CGFloat)r G:(CGFloat)g B:(CGFloat)b A:(CGFloat)a;
 
+/**
+ *  获得当前活动的VC
+ *
+ */
++ (UIViewController *)getCurrentVC;
+
 @end

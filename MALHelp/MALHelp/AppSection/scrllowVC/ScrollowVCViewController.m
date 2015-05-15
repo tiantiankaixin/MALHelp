@@ -14,6 +14,7 @@
 @interface ScrollowVCViewController ()<ControllerScrollViewDelegate>
 {
     MALSegmentControl *_segControl;
+    NSArray *_segTitleArray;
 }
 
 @property (weak, nonatomic) IBOutlet ControllerScrollView *controllerScrollView;
@@ -40,6 +41,7 @@
 - (void)setUpSegView
 {
     NSArray *titleArray = @[@"推荐",@"卫视",@"央视", @"地方",@"卫星",@"东方时空"];
+    _segTitleArray = titleArray;
     CGRect segFrame = self.segView.bounds;
     segFrame.size.width = IOS_SCREEN.size.width;
     segFrame.size.height = IOS_SCREEN.size.width * (1 / 8.0);
@@ -57,11 +59,11 @@
 - (void)setUpControllerView
 {
     NSMutableArray *childVCArray = [[NSMutableArray alloc] init];
-    for (int i = 0; i < 6; i++)
+    for (int i = 0; i < _segTitleArray.count; i++)
     {
         ScrollowVCItemViewController *si = [[ScrollowVCItemViewController alloc] init];
         [self addChildViewController:si];
-        si.vcTitle = MALStringFormat(@"ScrollowVCItemViewController_%d",i);
+        si.vcTitle = MALStringFormat(@"%@",_segTitleArray[i]);
         [childVCArray addObject:si];
     }
     self.controllerScrollView.csDelegate = self;
@@ -77,6 +79,8 @@
 {
     Log(@"ScrollowVCViewController 被释放了");
 }
+
+
 
 - (void)didReceiveMemoryWarning
 {

@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "MainViewController.h"
+#import "UIViewController+MALNavigation.h"
 @interface AppDelegate ()
 
 @end
@@ -29,7 +30,9 @@
 
 - (void)setUpMainViewController
 {
-    self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:[[MainViewController alloc] init]];
+    UINavigationController *na = [[UINavigationController alloc] initWithRootViewController:[[MainViewController alloc] init]];
+    [UIViewController setNavigationBarBgImage:na andBgImage:[[UIImage imageNamed:@"About"] resizableImageWithCapInsets:UIEdgeInsetsMake(40, 0, 0, 0)]];
+    self.window.rootViewController = na; 
 }
 
 #pragma mark - 做一些测试
