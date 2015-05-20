@@ -57,6 +57,7 @@
     return rgba;
 }
 
+#pragma mark - 获得当前活动的VC
 + (UIViewController *)getCurrentVC
 {
     UIViewController *result = nil;

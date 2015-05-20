@@ -39,7 +39,7 @@ typedef struct{
 - (BOOL)isEmpty;
 
 /**
- *字符串md5
+ *获得一个字符串的16位md5串
  */
 + (NSString*)getmd5WithString:(NSString *)string;
 

@@ -31,8 +31,8 @@
 - (void)setUpMainViewController
 {
     UINavigationController *na = [[UINavigationController alloc] initWithRootViewController:[[MainViewController alloc] init]];
-    [UIViewController setNavigationBarBgImage:na andBgImage:[[UIImage imageNamed:@"About"] resizableImageWithCapInsets:UIEdgeInsetsMake(40, 0, 0, 0)]];
-    self.window.rootViewController = na; 
+    //[UIViewController setNavigationBarBgImage:na andBgImage:[[UIImage imageNamed:@"About"] resizableImageWithCapInsets:UIEdgeInsetsMake(40, 0, 0, 0)]];
+    self.window.rootViewController = na;
 }
 
 #pragma mark - 做一些测试

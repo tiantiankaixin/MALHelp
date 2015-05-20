@@ -12,7 +12,7 @@
 
 @implementation NSString (MALNSString)
 
-
+#pragma mark - 是否是一个有效的手机号码
 - (BOOL)isMobilePhoneNumber
 {
     NSString *regex = @"^((13[0-9])|(147)|(15[^4,\\D])|(18[0,5-9]))\\d{8}$";
@@ -21,6 +21,7 @@
     return isMatch;
 }
 
+#pragma mark - 是否是一个有效的邮箱
 - (BOOL)isEmail
 {
     NSString *emailRegex = @"[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}";
@@ -28,6 +29,7 @@
     return [emailTest evaluateWithObject:self];
 }
 
+#pragma mark - 清除字符串中得空格
 - (NSString *)clearBlank
 {
     return [self stringByReplacingOccurrencesOfString:@" " withString:@""];
@@ -43,6 +45,7 @@
     return NO;
 }
 
+#pragma mark - 获得一个字符串的16位md5串
 + (NSString*)getmd5WithString:(NSString *)string
 {
     const char* original_str=[string UTF8String];
@@ -61,7 +64,7 @@
     return [outPutStr lowercaseString];
 }
 
-
+#pragma mark - 获得本地文件的md5值
 +(NSString*)getFileMD5WithPath:(NSString*)path
 {
     return (__bridge_transfer NSString *)FileMD5HashCreateWithPath((__bridge CFStringRef)path, FileHashDefaultChunkSizeForReadingData);
@@ -128,6 +131,7 @@ done:
     return result;
 }
 
+#pragma mark - 获取NSData的16位的md5字符串
 + (NSString*)getMD5WithData:(NSData *)data
 {
     

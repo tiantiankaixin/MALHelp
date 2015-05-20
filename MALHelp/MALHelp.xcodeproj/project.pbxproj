@@ -28,6 +28,7 @@
 		686DF3CE1AFB39DD0069292A /* BlurViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 686DF3CC1AFB39DD0069292A /* BlurViewController.m */; };
 		686DF3CF1AFB39DD0069292A /* BlurViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 686DF3CD1AFB39DD0069292A /* BlurViewController.xib */; };
 		686DF3D31AFB3E3C0069292A /* mohu.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 686DF3D21AFB3E3C0069292A /* mohu.jpg */; };
+		688FBB2B1B0C8B50001FE2DC /* NSObject+FileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 688FBB2A1B0C8B50001FE2DC /* NSObject+FileManager.m */; };
 		68D69BCA1AFB63470005386B /* CustomBarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 68D69BC71AFB63470005386B /* CustomBarItem.m */; };
 		68D69BCE1AFB63670005386B /* UIViewController+MALNavigation.m in Sources */ = {isa = PBXBuildFile; fileRef = 68D69BCD1AFB63670005386B /* UIViewController+MALNavigation.m */; };
 		68D69BD41AFB68650005386B /* SetFrameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68D69BD21AFB68650005386B /* SetFrameViewController.m */; };
@@ -93,6 +94,8 @@
 		686DF3CC1AFB39DD0069292A /* BlurViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlurViewController.m; sourceTree = "<group>"; };
 		686DF3CD1AFB39DD0069292A /* BlurViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BlurViewController.xib; sourceTree = "<group>"; };
 		686DF3D21AFB3E3C0069292A /* mohu.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mohu.jpg; sourceTree = "<group>"; };
+		688FBB291B0C8B50001FE2DC /* NSObject+FileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+FileManager.h"; sourceTree = "<group>"; };
+		688FBB2A1B0C8B50001FE2DC /* NSObject+FileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+FileManager.m"; sourceTree = "<group>"; };
 		68D44A381AC826E900DF3D04 /* 常用类库清单.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "常用类库清单.h"; sourceTree = "<group>"; };
 		68D69BC61AFB63470005386B /* CustomBarItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomBarItem.h; sourceTree = "<group>"; };
 		68D69BC71AFB63470005386B /* CustomBarItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomBarItem.m; sourceTree = "<group>"; };
@@ -250,6 +253,8 @@
 				68E769091AA9350200DBED40 /* NSObject+MALRunTime.m */,
 				6831F4C11B008678002FEF5F /* NSObject+SystemInfo.h */,
 				6831F4C21B008678002FEF5F /* NSObject+SystemInfo.m */,
+				688FBB291B0C8B50001FE2DC /* NSObject+FileManager.h */,
+				688FBB2A1B0C8B50001FE2DC /* NSObject+FileManager.m */,
 			);
 			path = MALNSObject;
 			sourceTree = "<group>";
@@ -595,6 +600,7 @@
 				6847B85D1AFB31340065972A /* UIView+MALFunction.m in Sources */,
 				68E769111AA9376800DBED40 /* TestClass.m in Sources */,
 				6831F4BA1B005805002FEF5F /* ScrollowVCItemViewController.m in Sources */,
+				688FBB2B1B0C8B50001FE2DC /* NSObject+FileManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
