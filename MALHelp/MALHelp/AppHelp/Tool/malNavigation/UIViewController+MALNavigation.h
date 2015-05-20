@@ -21,11 +21,12 @@
 - (CustomBarItem *)setRightItemWithTitle:(NSString *)title;
 
 /**
- *  设置返回按钮颜色，全局有效
+ *  设置导航控制器导航栏返回按钮文字颜色
  *
- *  @param color 颜色
+ *  @param naviVC 要设置的navigationController
+ *  @param color  返回按钮颜色
  */
-+ (void)setBackItemTextColor:(UIColor *)color;
++ (void)setBackItemTextColor:(UINavigationController *)naviVC itemColor:(UIColor *)color;
 
 /**
  *  设置导航栏背景图片

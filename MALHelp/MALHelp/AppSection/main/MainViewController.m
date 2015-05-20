@@ -43,7 +43,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.title = @"MainViewController";
+    [self setCenterItemWithTitle:@"主页"];
     [self configueDataSource];
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"mainCell"];
 }

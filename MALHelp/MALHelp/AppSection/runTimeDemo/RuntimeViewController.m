@@ -17,7 +17,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.title = @"RuntimeViewController";
+    [self setCenterItemWithTitle:@"RuntimeViewController"];
     [self testAppearance];
     // Do any additional setup after loading the view from its nib.
 }

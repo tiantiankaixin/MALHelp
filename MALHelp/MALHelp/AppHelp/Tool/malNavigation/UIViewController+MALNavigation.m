@@ -8,7 +8,7 @@
 
 #import "UIViewController+MALNavigation.h"
 
-#define ItemColor [UIColor blackColor] //item颜色
+#define ItemColor [UIColor redColor] //item颜色
 #define SideItemTextSize   15        //左右item文字大小
 #define CenterItemTextSize 17        //中间item文字大小
 
@@ -51,9 +51,9 @@
 }
 
 #pragma mark - 设置返回按钮颜色
-+  (void)setBackItemTextColor:(UIColor *)color
++  (void)setBackItemTextColor:(UINavigationController *)naviVC itemColor:(UIColor *)color
 {
-    [[UINavigationBar appearance] setTintColor:color];
+    [naviVC.navigationBar setTintColor:color];
 }
 
 #pragma mark - 设置导航栏背景图片

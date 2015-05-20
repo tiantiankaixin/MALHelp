@@ -34,6 +34,7 @@
 - (void)setUpView
 {
     self.automaticallyAdjustsScrollViewInsets = NO;
+    [self setCenterItemWithTitle:@"滚动视图"];
     [self setUpSegView];
     [self setUpControllerView];
 }

@@ -32,6 +32,7 @@
 {
     UINavigationController *na = [[UINavigationController alloc] initWithRootViewController:[[MainViewController alloc] init]];
     //[UIViewController setNavigationBarBgImage:na andBgImage:[[UIImage imageNamed:@"About"] resizableImageWithCapInsets:UIEdgeInsetsMake(40, 0, 0, 0)]];
+    [UIViewController setBackItemTextColor:na itemColor:[UIColor redColor]];
     self.window.rootViewController = na;
 }
 

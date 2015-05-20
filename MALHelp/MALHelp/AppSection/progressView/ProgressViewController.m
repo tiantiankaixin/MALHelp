@@ -32,7 +32,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.title = @"自定义进度条";
+    [self setCenterItemWithTitle:@"自定义进度条"];
     [self.view addSubview:self.malProgress];
     [self setProgressViewWithImage];
     //[self setProgressViewWithColor];
