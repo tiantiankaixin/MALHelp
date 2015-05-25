@@ -39,7 +39,11 @@
 #pragma mark - 做一些测试
 - (void)doSomethingForTest
 {
-    Log(@"%@",@"log 输出测试");
+    //注：dispatch_after 是在一定时间后将任务提交给主线程，但是不一定是立即执行的
+    MGCDAfter(2.0f, ^{
+    
+        Log(@"dispatch_after 延时提交任务测试");
+    });
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

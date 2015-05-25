@@ -157,6 +157,15 @@ static inline NSString *StringFromObject(id object) {
  */
 #define HandleOnMainThread(block) dispatch_async(dispatch_get_main_queue(),block);
 
+/**
+ *  gcd调度时间 dispatch_time
+ */
+#define MGCDTime(time) dispatch_time(DISPATCH_TIME_NOW, time * NSEC_PER_SEC)
+
+/**
+ *  dispatch_after   延时执行代码
+ */
+#define MGCDAfter(delayTime,block)  dispatch_after(MGCDTime(delayTime), dispatch_get_main_queue(),block)
 
 //----------------thread
 

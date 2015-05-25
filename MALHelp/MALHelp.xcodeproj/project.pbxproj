@@ -29,6 +29,7 @@
 		686DF3CF1AFB39DD0069292A /* BlurViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 686DF3CD1AFB39DD0069292A /* BlurViewController.xib */; };
 		686DF3D31AFB3E3C0069292A /* mohu.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 686DF3D21AFB3E3C0069292A /* mohu.jpg */; };
 		688FBB2B1B0C8B50001FE2DC /* NSObject+FileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 688FBB2A1B0C8B50001FE2DC /* NSObject+FileManager.m */; };
+		68CB73CF1B12E9A300A84206 /* NSObject+magic.m in Sources */ = {isa = PBXBuildFile; fileRef = 68CB73CE1B12E9A300A84206 /* NSObject+magic.m */; };
 		68D69BCA1AFB63470005386B /* CustomBarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 68D69BC71AFB63470005386B /* CustomBarItem.m */; };
 		68D69BCE1AFB63670005386B /* UIViewController+MALNavigation.m in Sources */ = {isa = PBXBuildFile; fileRef = 68D69BCD1AFB63670005386B /* UIViewController+MALNavigation.m */; };
 		68D69BD41AFB68650005386B /* SetFrameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68D69BD21AFB68650005386B /* SetFrameViewController.m */; };
@@ -96,6 +97,8 @@
 		686DF3D21AFB3E3C0069292A /* mohu.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mohu.jpg; sourceTree = "<group>"; };
 		688FBB291B0C8B50001FE2DC /* NSObject+FileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+FileManager.h"; sourceTree = "<group>"; };
 		688FBB2A1B0C8B50001FE2DC /* NSObject+FileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+FileManager.m"; sourceTree = "<group>"; };
+		68CB73CD1B12E9A300A84206 /* NSObject+magic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+magic.h"; sourceTree = "<group>"; };
+		68CB73CE1B12E9A300A84206 /* NSObject+magic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+magic.m"; sourceTree = "<group>"; };
 		68D44A381AC826E900DF3D04 /* 常用类库清单.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "常用类库清单.h"; sourceTree = "<group>"; };
 		68D69BC61AFB63470005386B /* CustomBarItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomBarItem.h; sourceTree = "<group>"; };
 		68D69BC71AFB63470005386B /* CustomBarItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomBarItem.m; sourceTree = "<group>"; };
@@ -255,6 +258,8 @@
 				6831F4C21B008678002FEF5F /* NSObject+SystemInfo.m */,
 				688FBB291B0C8B50001FE2DC /* NSObject+FileManager.h */,
 				688FBB2A1B0C8B50001FE2DC /* NSObject+FileManager.m */,
+				68CB73CD1B12E9A300A84206 /* NSObject+magic.h */,
+				68CB73CE1B12E9A300A84206 /* NSObject+magic.m */,
 			);
 			path = MALNSObject;
 			sourceTree = "<group>";
@@ -584,6 +589,7 @@
 				686DF3CE1AFB39DD0069292A /* BlurViewController.m in Sources */,
 				68D69BD41AFB68650005386B /* SetFrameViewController.m in Sources */,
 				68038C371AA8268600CBE776 /* AppDelegate.m in Sources */,
+				68CB73CF1B12E9A300A84206 /* NSObject+magic.m in Sources */,
 				68D69BCA1AFB63470005386B /* CustomBarItem.m in Sources */,
 				6831F4B51B0057F0002FEF5F /* ScrollowVCViewController.m in Sources */,
 				68E769171AA937AC00DBED40 /* RuntimeViewController.m in Sources */,
@@ -715,14 +721,15 @@
 			baseConfigurationReference = 8EFD3B25C5D99DE3618F3A12 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Jiahao Huang (WNDJ36R43V)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Xiaojie Shen (Y72372Y6UM)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Xiaojie Shen (Y72372Y6UM)";
 				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/MALHelp/PrefixHeader.pch";
 				INFOPLIST_FILE = MALHelp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "afaddfe6-6127-4382-85c9-81820f65556a";
+				PROVISIONING_PROFILE = "f977a09f-ec8a-49f1-aa5f-509506742ac5";
 			};
 			name = Debug;
 		};
@@ -731,14 +738,15 @@
 			baseConfigurationReference = 4EDE4F975C67A0EEC507466B /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Jiahao Huang (WNDJ36R43V)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Xiaojie Shen (Y72372Y6UM)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Xiaojie Shen (Y72372Y6UM)";
 				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/MALHelp/PrefixHeader.pch";
 				INFOPLIST_FILE = MALHelp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "afaddfe6-6127-4382-85c9-81820f65556a";
+				PROVISIONING_PROFILE = "f977a09f-ec8a-49f1-aa5f-509506742ac5";
 			};
 			name = Release;
 		};
