@@ -34,6 +34,16 @@ typedef void(^MutableSegBlock)(NSInteger);
 @property (nonatomic, assign)   CGFloat lineHeight;
 
 /**
+ *  是否支持变色
+ */
+@property (nonatomic, assign) BOOL isChangeColor;
+
+/**
+ *  是否支持缩放
+ */
+@property (nonatomic, assign) BOOL isScale;
+
+/**
  *得到一个控件
  *@param  titleArray 标题数组
  *@param  rect 控件的frame

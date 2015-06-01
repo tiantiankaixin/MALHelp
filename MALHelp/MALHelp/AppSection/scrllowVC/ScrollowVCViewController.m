@@ -41,12 +41,14 @@
 
 - (void)setUpSegView
 {
-    NSArray *titleArray = @[@"推荐",@"卫视",@"央视", @"地方",@"卫星",@"东方时空"];
+    NSArray *titleArray = @[@"推荐",@"卫视",@"央视", @"地方",@"卫星",@"东方时空",@"地方",@"卫星",@"东方时空"];
     _segTitleArray = titleArray;
     CGRect segFrame = self.segView.bounds;
     segFrame.size.width = IOS_SCREEN.size.width;
     segFrame.size.height = IOS_SCREEN.size.width * (1 / 8.0);
     _segControl = [MALSegmentControl getControlWithTitlesArray:titleArray andFrame:segFrame selectIndex:2 andControlType:downSideLineControl buttonWidth:SCREEN_WIDTH / 4];
+    _segControl.isChangeColor = YES;
+    _segControl.isScale = YES;
     [self.segView addSubview:_segControl];
     [_segControl setSegNormalLineColor:[UIColor blueColor] selectColor:[UIColor orangeColor]];
     [_segControl setSegNormalTextColorWithRgba:M_RGBAFrom(29, 55, 45, 1.0) selectTextColorRgba:M_RGBAFrom(224, 6, 1, 1.0) textFont:17];
@@ -76,12 +78,15 @@
     [_segControl updateViewFrameWithRatio:ratio];
 }
 
+- (void)viewScrollToIndex:(NSInteger)currentIndex andCurrentVC:(UIViewController *)currentVC
+{
+    Log(@"%d",(int)currentIndex);
+}
+
 - (void)dealloc
 {
     Log(@"ScrollowVCViewController 被释放了");
 }
-
-
 
 - (void)didReceiveMemoryWarning
 {

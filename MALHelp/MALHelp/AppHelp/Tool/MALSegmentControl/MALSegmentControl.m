@@ -136,6 +136,7 @@
     [self setButtonTextColorWithIndex:selectIndex color:self.selectTextColor];
 }
 
+#pragma mark - 设置scrollView的一些属性
 - (void)setUpScrollView
 {
     self.showsHorizontalScrollIndicator = NO;
@@ -144,6 +145,7 @@
     self.contentSize = CGSizeMake(self.segWidth * self.segNumbers, 0);
 }
 
+#pragma mark - 视图上德按钮被点击
 - (void)segClick:(UIButton *)sender
 {
     [self segChangeWithFromIndex:self.selectIndex toIndex:sender.tag];
@@ -244,7 +246,7 @@
 #pragma mark - 设置按钮的缩放比例
 - (void)setButtonTextScaleWithIndex:(NSInteger)index scale:(CGFloat)scale
 {
-    if (![self validIndex:index])
+    if (![self validIndex:index] || !self.isScale)
     {
         return;
     }
@@ -343,36 +345,52 @@
 #pragma mark - 根据进度设置文本颜色  及大小
 - (void)setNowTextColorWithRatio:(CGFloat)ratio
 {
+    if (ratio > self.segNumbers)
+    {
+        return;
+    }
     CGFloat colorProgress = ratio - self.selectIndex;
     if (self.selectIndex > ratio)
     {
         colorProgress = -colorProgress;
     }
-    M_RGBA nowNormalText;
-    nowNormalText.m_r = self.textRgba.m_r * colorProgress + self.normalTextRgba.m_r;
-    nowNormalText.m_g = self.textRgba.m_g * colorProgress + self.normalTextRgba.m_g;
-    nowNormalText.m_b = self.textRgba.m_b * colorProgress + self.normalTextRgba.m_b;
-    
-    M_RGBA nowSelectText;
-    nowSelectText.m_r = self.selectTextRgba.m_r - self.textRgba.m_r * colorProgress;
-    nowSelectText.m_g = self.selectTextRgba.m_g - self.textRgba.m_g * colorProgress;
-    nowSelectText.m_b = self.selectTextRgba.m_b - self.textRgba.m_b * colorProgress;
-    
-    UIColor *selectTextColor = RGB(nowNormalText.m_r, nowNormalText.m_g, nowNormalText.m_b);
-    UIColor *normalTextColor = RGB(nowSelectText.m_r, nowSelectText.m_g, nowSelectText.m_b);
-    if (self.selectIndex < ratio)//向左滑动
+    if (self.isChangeColor)
     {
-        [self setButtonTextColorWithIndex:self.selectIndex color:normalTextColor];
-        [self setButtonTextScaleWithIndex:self.selectIndex scale:-colorProgress];
-        [self setButtonTextColorWithIndex:self.selectIndex + 1 color:selectTextColor];
-        [self setButtonTextScaleWithIndex:self.selectIndex + 1 scale:colorProgress];
+        M_RGBA nowNormalText;
+        nowNormalText.m_r = self.textRgba.m_r * colorProgress + self.normalTextRgba.m_r;
+        nowNormalText.m_g = self.textRgba.m_g * colorProgress + self.normalTextRgba.m_g;
+        nowNormalText.m_b = self.textRgba.m_b * colorProgress + self.normalTextRgba.m_b;
+        
+        M_RGBA nowSelectText;
+        nowSelectText.m_r = self.selectTextRgba.m_r - self.textRgba.m_r * colorProgress;
+        nowSelectText.m_g = self.selectTextRgba.m_g - self.textRgba.m_g * colorProgress;
+        nowSelectText.m_b = self.selectTextRgba.m_b - self.textRgba.m_b * colorProgress;
+        
+        UIColor *selectTextColor = RGB(nowNormalText.m_r, nowNormalText.m_g, nowNormalText.m_b);
+        UIColor *normalTextColor = RGB(nowSelectText.m_r, nowSelectText.m_g, nowSelectText.m_b);
+        if (self.selectIndex < ratio)//向左滑动
+        {
+            [self setButtonTextColorWithIndex:self.selectIndex color:normalTextColor];
+            [self setButtonTextColorWithIndex:self.selectIndex + 1 color:selectTextColor];
+        }
+        else //向右滑动
+        {
+            [self setButtonTextColorWithIndex:self.selectIndex color:normalTextColor];
+            [self setButtonTextColorWithIndex:self.selectIndex - 1 color:selectTextColor];
+            }
     }
-    else //向右滑动
+    if (self.isScale)
     {
-        [self setButtonTextColorWithIndex:self.selectIndex color:normalTextColor];
-        [self setButtonTextColorWithIndex:self.selectIndex - 1 color:selectTextColor];
-        [self setButtonTextScaleWithIndex:self.selectIndex scale:-colorProgress];
-        [self setButtonTextScaleWithIndex:self.selectIndex - 1 scale:colorProgress];
+        if (self.selectIndex < ratio)//向左滑动
+        {
+            [self setButtonTextScaleWithIndex:self.selectIndex scale:-colorProgress];
+            [self setButtonTextScaleWithIndex:self.selectIndex + 1 scale:colorProgress];
+        }
+        else //向右滑动
+        {
+            [self setButtonTextScaleWithIndex:self.selectIndex scale:-colorProgress];
+            [self setButtonTextScaleWithIndex:self.selectIndex - 1 scale:colorProgress];
+        }
     }
 }
 

@@ -80,6 +80,7 @@
 {
     [self configueControllerScrollViewWithSubVC:subVC andCurrentIndex:currentIndex];
     [self loadSubView];
+    [self viewScrollToIndex:currentIndex];
     [self layoutSubviews];
 }
 
@@ -182,6 +183,16 @@
         self.currentPage += changeIndex;
         [self loadSubView];
         [self clearSubView];
+        [self viewScrollToIndex:self.currentPage];
+    }
+}
+
+#pragma mark - view滑动到index页
+- (void)viewScrollToIndex:(NSInteger)index
+{
+    if ([self.csDelegate respondsToSelector:@selector(viewScrollToIndex:andCurrentVC:)])
+    {
+        [self.csDelegate viewScrollToIndex:index andCurrentVC:self.subVCArray[self.currentPage]];
     }
 }
 

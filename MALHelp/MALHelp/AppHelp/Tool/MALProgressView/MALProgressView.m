@@ -89,7 +89,6 @@
 - (void)setBgImage:(NSString *)bgImage
 {
     self.bgView.image = [UIImage imageNamed:bgImage];
-    
 }
 
 - (void)setTopImage:(NSString *)topImage
