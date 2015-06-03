@@ -43,6 +43,7 @@ static dispatch_semaphore_t sem = nil;
     if (sem)
     {
         dispatch_semaphore_signal(sem);
+        sem = nil;
     }
 }
 

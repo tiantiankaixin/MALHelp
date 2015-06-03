@@ -11,7 +11,7 @@
 @interface NSObject (magic)
 
 /**
- *  延时执行handleBlock里的代码(当收到信号时执行sendSignal)，如果超时执行timeOutBlock里的代码。
+ *  延时执行handleBlock里的代码(一直等待直到收到sendSignal发送的信号不会阻塞主线程)，如果超时执行timeOutBlock里的代码。
  *
  *  @param time         超时时间
  *  @param timeOutBlock 超时执行block
