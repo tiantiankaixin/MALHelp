@@ -14,6 +14,7 @@
 //defaultControl 格式下使用的属性
 #define bgView_Margin 4 //滑块与边界的距离的2倍
 #define bgView_CornerRadius 4//滑块圆角大小
+#define Max_Scale 2
 @interface MALSegmentControl()<UIScrollViewDelegate>
 
 @property (nonatomic,strong) NSMutableArray *buttonArray;
@@ -78,6 +79,7 @@
     seg.controlType = controlType;
     seg.selectIndex = selectIndex;
     seg.animationTime = AnimationTime;
+    seg.maxScale = Max_Scale;
     [seg setSegNormalTextColor:[UIColor blackColor] selectTextColor:[UIColor blueColor] textFont:17];
     seg.segWidth = buttonWidth;
     seg.segNumbers = titleArray.count;
@@ -251,10 +253,10 @@
         return;
     }
     UIButton *button = [self.buttonArray objectAtIndex:index];
-    CGFloat nowScale = 1 + scale / 2;
+    CGFloat nowScale = 1 + (self.maxScale - 1) * scale;
     if (scale < 0)
     {
-        nowScale = 1.5 + scale / 2;
+        nowScale = self.maxScale + (self.maxScale - 1) * scale;
     }
     button.transform = CGAffineTransformMakeScale(nowScale,nowScale);
 }

@@ -32,6 +32,10 @@ typedef void(^MutableSegBlock)(NSInteger);
 @property (nonatomic, assign)   NSInteger onePageNumbers;
 @property (nonatomic, assign)   CGFloat bgLineHegiht;
 @property (nonatomic, assign)   CGFloat lineHeight;
+/**
+ *  seg上文字最大放大比例 默认值为2
+ */
+@property (nonatomic, assign)   CGFloat maxScale;
 
 /**
  *  是否支持变色
