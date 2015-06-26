@@ -9,14 +9,14 @@
 #import "UIViewController+MALNavigation.h"
 
 #define ItemColor [UIColor redColor] //item颜色
-#define SideItemTextSize   15        //左右item文字大小
-#define CenterItemTextSize 17        //中间item文字大小
+#define SideItemFont   [UIFont systemFontOfSize:15]        //左右item 字体格式
+#define CenterItemFont [UIFont systemFontOfSize:17]        //中间item 字体格式
 
 @implementation UIViewController (MALNavigation)
 
-- (CustomBarItem *)setItemWithTitle:(NSString *)title textColor:(UIColor *)color fontSize:(CGFloat)font itemType:(ItemType)type
+- (CustomBarItem *)setItemWithTitle:(NSString *)title textColor:(UIColor *)color font:(UIFont *)font itemType:(ItemType)type
 {
-    CustomBarItem *item = [CustomBarItem itemWithTitle:title textColor:color fontSize:font itemType:type];
+    CustomBarItem *item = [CustomBarItem itemWithTitle:title textColor:color font:font itemType:type];
     [item setItemWithNavigationItem:self.navigationItem itemType:type];
     return item;
 }
@@ -37,17 +37,18 @@
 
 - (CustomBarItem *)setLeftItemWithTitle:(NSString *)title
 {
-    return [self setItemWithTitle:title textColor:ItemColor fontSize:SideItemTextSize itemType:left];
+    [UIFont systemFontOfSize:17];
+    return [self setItemWithTitle:title textColor:ItemColor font:SideItemFont itemType:left];
 }
 
 - (CustomBarItem *)setCenterItemWithTitle:(NSString *)title
 {
-    return [self setItemWithTitle:title textColor:ItemColor fontSize:CenterItemTextSize itemType:center];
+    return [self setItemWithTitle:title textColor:ItemColor font:CenterItemFont itemType:center];
 }
 
 - (CustomBarItem *)setRightItemWithTitle:(NSString *)title
 {
-     return [self setItemWithTitle:title textColor:ItemColor fontSize:SideItemTextSize itemType:right];
+     return [self setItemWithTitle:title textColor:ItemColor font:SideItemFont itemType:right];
 }
 
 #pragma mark - 设置返回按钮颜色

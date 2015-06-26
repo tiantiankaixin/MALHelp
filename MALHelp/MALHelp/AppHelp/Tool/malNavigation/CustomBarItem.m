@@ -21,14 +21,14 @@
     [self.items addObject:self.contentBarItem];
  }
 
-+ (CustomBarItem *)itemWithTitle:(NSString *)title textColor:(UIColor *)color fontSize:(CGFloat )font itemType:(ItemType)type
++ (CustomBarItem *)itemWithTitle:(NSString *)title textColor:(UIColor *)color font:(UIFont *)font itemType:(ItemType)type
 {
     CustomBarItem *item = [[CustomBarItem alloc] init];
     [item initCustomItemWithType:type andSize:TitleViewSize];
     [item setItemContetnWithType:type];
     [item.contentBarItem setTitle:title forState:(UIControlStateNormal)];
     [item.contentBarItem setTitleColor:color forState:(UIControlStateNormal)];
-    [item.contentBarItem.titleLabel setFont:[UIFont systemFontOfSize:font]];
+    [item.contentBarItem.titleLabel setFont:font];
     return item;
 }
 

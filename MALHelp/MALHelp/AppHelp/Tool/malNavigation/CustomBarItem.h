@@ -26,7 +26,7 @@ typedef enum{
 @property (nonatomic, strong) UIView *customView;
 @property (nonatomic, assign) BOOL isCustomView;
 
-+ (CustomBarItem *)itemWithTitle:(NSString *)title textColor:(UIColor *)color fontSize:(CGFloat)font itemType:(ItemType)type;
++ (CustomBarItem *)itemWithTitle:(NSString *)title textColor:(UIColor *)color font:(UIFont *)font itemType:(ItemType)type;
 + (CustomBarItem *)itemWithImage:(NSString *)imageName size:(CGSize)size type:(ItemType)type;
 + (CustomBarItem *)itemWithCustomeView:(UIView *)customView type:(ItemType)type;
 - (void)setItemWithNavigationItem:(UINavigationItem *)navigationItem itemType:(ItemType)type;

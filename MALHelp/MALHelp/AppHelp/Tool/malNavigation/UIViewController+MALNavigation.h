@@ -11,7 +11,7 @@
 
 @interface UIViewController (MALNavigation)
 
-- (CustomBarItem *)setItemWithTitle:(NSString *)title textColor:(UIColor *)color fontSize:(CGFloat)font itemType:(ItemType)type;
+- (CustomBarItem *)setItemWithTitle:(NSString *)title textColor:(UIColor *)color font:(UIFont *)font itemType:(ItemType)type;
 - (CustomBarItem *)setItemWithImage:(NSString *)imageName size:(CGSize)size itemType:(ItemType)type;
 - (CustomBarItem *)setItemWithCustomView:(UIView *)customView itemType:(ItemType)type;
 
