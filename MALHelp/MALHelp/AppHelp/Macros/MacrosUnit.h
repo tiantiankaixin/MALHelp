@@ -13,6 +13,7 @@
 #pragma mark -
 #pragma mark iOS Frame
 //获取当前screen
+#define mainSize    [UIScreen mainScreen].bounds.size
 #define IOS_SCREEN  [ UIScreen mainScreen ].bounds
 
 // 屏幕高度
@@ -50,6 +51,7 @@
 #define AppInfoDic   [[NSBundle mainBundle] infoDictionary] //应用信息字典
 #define AppVersion   [AppInfoDic objectForKey:@"CFBundleVersion"] //应用版本号
 #define AppName      [AppInfoDic objectForKey:@"CFBundleDisplayName"] //应用名称
+#define userDefaults [NSUserDefaults standardUserDefaults]
 
 
 //++++++++ 系统版本
@@ -59,6 +61,12 @@
 #define IOS_VERSION_GREATER_THAN_OR_EQUAL_TO(v)  [[[UIDevice currentDevice] systemVersion] floatValue]>=v
 #define IOS_VERSION_LESS_THAN(v)                 [[[UIDevice currentDevice] systemVersion] floatValue]<v
 #define IOS_VERSION_LESS_THAN_OR_EQUAL_TO(v)     [[[UIDevice currentDevice] systemVersion] floatValue]<=v
+
+//++++++++ storyBoard
+#define StoryBoardWithName(name)  [UIStoryboard storyboardWithName:name bundle:nil]
+#define ControllerWithSBAndIdentifier(sb,identifier)  [sb instantiateViewControllerWithIdentifier:identifier]
+#define MALNibWithName(name)   [[NSBundle mainBundle] loadNibNamed:name owner:nil options:nil]
+#define MALUINibWithName(name)  [UINib nibWithNibName:name bundle:nil];
 
 //++++++++ 沙盒文件路径
 
@@ -136,9 +144,16 @@ static inline NSString *StringFromObject(id object) {
 #define Log(...)  {}
 #endif
 
+
+#ifndef __OPTIMIZE__
+#define YNLog(...) NSLog(__VA_ARGS__)
+#else
+#define YNLog(...){}
+#endif
+
 //设置导航栏返回标题
 #define SetBackItemTitle(title)  [self.navigationItem setBackBarButtonItem:[[UIBarButtonItem alloc] initWithTitle:title style:UIBarButtonItemStylePlain target:nil action:nil]]
-#define SetBackItem  SetBackItemTitle(@"返回")
+#define SetBackItem  SetBackItemTitle(@"")
 
 //----------------function
 
@@ -180,6 +195,10 @@ static inline NSString *StringFromObject(id object) {
 //弹出框
 #define AlertViewWithTitleAndMsg(title,msg)  [[[UIAlertView alloc] initWithTitle:title message:msg delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil, nil] show]
 #define AlertViewWithTitle(title)   AlertViewWithTitleAndMsg(title,nil)
+
+//按钮
+#define BtnTitleForState(btn,state)  (NSString *)[btn titleForState:state]
+#define BtnTitleForNormal(btn)        BtnTitleForState(btn,UIControlStateNormal)
 
 //----------------UIView
 

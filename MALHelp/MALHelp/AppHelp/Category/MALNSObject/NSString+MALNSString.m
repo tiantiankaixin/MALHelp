@@ -224,4 +224,88 @@ done:
     
     return second;
 }
+
+#pragma mark - 判断输入的字符串是否全是英文
++ (BOOL)isEnString:(NSString *)str
+{
+    NSString *regex = @"^[a-zA-Z]+$";
+    NSPredicate *pred = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", regex];
+    
+    return [pred evaluateWithObject:str];
+}
+
+#pragma mark - 判断输入的是否全是中文
++ (BOOL)isChineseString:(NSString *)str
+{
+    NSString *regex = @"^[\u4e00-\u9fa5]+$";
+    NSPredicate *pred = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", regex];
+    
+    return [pred evaluateWithObject:str];
+}
+
+#pragma mark - 判断输入的是否全是数字
++ (BOOL)isNumString:(NSString *)str
+{
+    NSString *regex = @"^[0-9]+$";
+    NSPredicate *pred = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", regex];
+    
+    return [pred evaluateWithObject:str];
+}
+
+- (NSString *)gbkStr
+{
+    NSStringEncoding gbkEncoding = CFStringConvertEncodingToNSStringEncoding(kCFStringEncodingGBK_95);
+    NSData *data = [self dataUsingEncoding:NSUTF8StringEncoding];
+    return [[NSString alloc] initWithData:data encoding:gbkEncoding];
+}
+
+- (NSString *)getIntStr
+{
+    NSString *result;
+    NSArray *strArray = [self componentsSeparatedByString:@"."];
+    int tou;
+    if(strArray.count == 1)
+    {
+        return [strArray firstObject];
+    }
+    if (strArray.count != 2)
+    {
+        return nil;
+    }
+    else
+    {
+        tou = [strArray[0] intValue];
+        int wei = [strArray[1] intValue];
+        if (wei >= 5)
+        {
+            tou++;
+        }
+    }
+    result = [NSString stringWithFormat:@"%d",tou];
+    return result;
+}
+
+#pragma mark - 得到安全的字符串
++ (NSString *)getSafeStr:(id)ob
+{
+    if(ob == nil || [ob isKindOfClass:[NSNull class]])
+    {
+        return @"";
+    }
+    if ([ob isKindOfClass:[NSValue class]])
+    {
+        ob = [NSString stringWithFormat:@"%@",ob];
+    }
+    return ob;
+}
+
++ (id)safeObject:(id)obj
+{
+    if ([obj isKindOfClass:[NSNull class]])
+    {
+        return nil;
+    }
+    return obj;
+}
+
 @end
