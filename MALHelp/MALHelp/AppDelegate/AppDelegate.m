@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "MainViewController.h"
 #import "UIViewController+MALNavigation.h"
+#import "NSString+MALNSString.h"
 @interface AppDelegate ()
 
 @end

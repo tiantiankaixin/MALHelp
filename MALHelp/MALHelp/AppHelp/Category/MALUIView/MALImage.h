@@ -20,4 +20,7 @@
  */
 + (UIImage*)grayscale:(UIImage*)anImage type:(int)type;
 
+
+- (UIImage *)addlogoImage:(UIImage *)resizedImage;
+
 @end

@@ -129,4 +129,22 @@
     return effectedImage;
 }
 
+- (UIImage *)addlogoImage:(UIImage *)resizedImage
+{
+    UIGraphicsBeginImageContext(resizedImage.size);
+    [resizedImage drawInRect:CGRectMake(0, 0, resizedImage.size.width, resizedImage.size.height)];
+    
+    UIImage *maskImage  = [UIImage imageNamed:@"dzh_logo.png"];
+    
+    [maskImage drawInRect:CGRectMake((resizedImage.size.width - maskImage.size.width)/2,
+                                     (resizedImage.size.height - maskImage.size.height)/2,
+                                     maskImage.size.width,
+                                     maskImage.size.height)];
+    
+    UIImage *resultingImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return resultingImage;
+    
+}
+
 @end

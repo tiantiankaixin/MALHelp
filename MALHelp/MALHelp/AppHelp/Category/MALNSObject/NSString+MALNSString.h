@@ -106,11 +106,17 @@ typedef struct{
  */
 + (BOOL)isNumString:(NSString *)str;
 
+/**
+ *  判断是不是数字 可以是浮点型
+ *
+ *  @return YES：是
+ */
+- (BOOL)isNumber;
 
 /**
  *  gbk转码
  *
- *  @return <#return value description#>
+ *  @return utf-8 转 gbk
  */
 - (NSString *)gbkStr;
 
@@ -130,6 +136,13 @@ typedef struct{
  */
 + (NSString *)getSafeStr:(id)ob;
 
+/**
+ *  得到安全的object
+ *
+ *  @param obj <#obj description#>
+ *
+ *  @return <#return value description#>
+ */
 + (id)safeObject:(id)obj;
 
 @end

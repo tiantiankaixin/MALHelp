@@ -252,13 +252,66 @@ done:
     return [pred evaluateWithObject:str];
 }
 
+#pragma mark - 判断是否是数字可以是浮点型
+- (BOOL)isNumber
+{
+    NSString *tempStr = [self stringByReplacingOccurrencesOfString:@"." withString:@""];
+    if (![NSString isNumString:tempStr])
+    {
+        return NO;
+    }
+    NSInteger oldLength = self.length;
+    NSInteger newLength = tempStr.length;
+    if (oldLength - newLength > 1)
+    {
+        return NO;
+    }
+    
+    if ([self hasPrefix:@"."])
+    {
+        return NO;
+    }
+    
+    if ([self hasSuffix:@"."])
+    {
+        return NO;
+    }
+    
+    return YES;
+}
+
+-(BOOL)judgeStringIfisAnTypeOfNumber
+{
+    NSString *theRegex = @"^[0-9]+(.[0-9])?$";//{1,5}一到5位小数
+    NSPredicate *thePredicate = [NSPredicate predicateWithFormat:@"SELF MATCHES%@",theRegex];
+    BOOL isNumber = NO;
+    isNumber = [thePredicate evaluateWithObject:self];
+    
+    if (isNumber)
+    {
+        if (self.length >= 2)
+        {
+            NSInteger theFirstChar = [[self substringWithRange:NSMakeRange(0,1)] integerValue];
+            
+            if (theFirstChar==0 && [self rangeOfString:@"."].location == NSNotFound)
+            {
+                isNumber = NO;
+            }
+            
+        }
+    }
+    return isNumber;
+}
+
+#pragma mark - gbk编码
 - (NSString *)gbkStr
 {
-    NSStringEncoding gbkEncoding = CFStringConvertEncodingToNSStringEncoding(kCFStringEncodingGBK_95);
+    NSStringEncoding gbkEncoding = CFStringConvertEncodingToNSStringEncoding(kCFStringEncodingGB_18030_2000);
     NSData *data = [self dataUsingEncoding:NSUTF8StringEncoding];
     return [[NSString alloc] initWithData:data encoding:gbkEncoding];
 }
 
+#pragma mark - 四舍五入字符串
 - (NSString *)getIntStr
 {
     NSString *result;
