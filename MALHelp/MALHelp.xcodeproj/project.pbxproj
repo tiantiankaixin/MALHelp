@@ -25,6 +25,7 @@
 		6831F4C31B008678002FEF5F /* NSObject+SystemInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 6831F4C21B008678002FEF5F /* NSObject+SystemInfo.m */; };
 		6847B85A1AFB30F40065972A /* UIView+MALFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 6847B8591AFB30F40065972A /* UIView+MALFrame.m */; };
 		6847B85D1AFB31340065972A /* UIView+MALFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = 6847B85C1AFB31340065972A /* UIView+MALFunction.m */; };
+		68600B431B5DF4BE00BA0FA8 /* MALTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 68600B421B5DF4BE00BA0FA8 /* MALTextView.m */; };
 		686DF3CE1AFB39DD0069292A /* BlurViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 686DF3CC1AFB39DD0069292A /* BlurViewController.m */; };
 		686DF3CF1AFB39DD0069292A /* BlurViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 686DF3CD1AFB39DD0069292A /* BlurViewController.xib */; };
 		686DF3D31AFB3E3C0069292A /* mohu.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 686DF3D21AFB3E3C0069292A /* mohu.jpg */; };
@@ -92,6 +93,8 @@
 		6847B8591AFB30F40065972A /* UIView+MALFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MALFrame.m"; sourceTree = "<group>"; };
 		6847B85B1AFB31340065972A /* UIView+MALFunction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+MALFunction.h"; sourceTree = "<group>"; };
 		6847B85C1AFB31340065972A /* UIView+MALFunction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MALFunction.m"; sourceTree = "<group>"; };
+		68600B411B5DF4BE00BA0FA8 /* MALTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MALTextView.h; sourceTree = "<group>"; };
+		68600B421B5DF4BE00BA0FA8 /* MALTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MALTextView.m; sourceTree = "<group>"; };
 		686DF3CB1AFB39DD0069292A /* BlurViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlurViewController.h; sourceTree = "<group>"; };
 		686DF3CC1AFB39DD0069292A /* BlurViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlurViewController.m; sourceTree = "<group>"; };
 		686DF3CD1AFB39DD0069292A /* BlurViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BlurViewController.xib; sourceTree = "<group>"; };
@@ -292,6 +295,7 @@
 		68038C491AA82B6600CBE776 /* Tool */ = {
 			isa = PBXGroup;
 			children = (
+				68600B401B5DF4BE00BA0FA8 /* MALTextView */,
 				6831F4A91B0055B6002FEF5F /* ControllerScrollView */,
 				6831F4AC1B0055B6002FEF5F /* MALSegmentControl */,
 				68D69BC51AFB63470005386B /* malNavigation */,
@@ -349,6 +353,15 @@
 				6831F4B91B005805002FEF5F /* ScrollowVCItemViewController.xib */,
 			);
 			path = scrllowVC;
+			sourceTree = "<group>";
+		};
+		68600B401B5DF4BE00BA0FA8 /* MALTextView */ = {
+			isa = PBXGroup;
+			children = (
+				68600B411B5DF4BE00BA0FA8 /* MALTextView.h */,
+				68600B421B5DF4BE00BA0FA8 /* MALTextView.m */,
+			);
+			path = MALTextView;
 			sourceTree = "<group>";
 		};
 		686DF3CA1AFB39CA0069292A /* mohuxiaoguo */ = {
@@ -590,6 +603,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				68600B431B5DF4BE00BA0FA8 /* MALTextView.m in Sources */,
 				6847B85A1AFB30F40065972A /* UIView+MALFrame.m in Sources */,
 				6831F4AF1B0055B6002FEF5F /* ControllerScrollView.m in Sources */,
 				68FEE28E1B3D2040003260B0 /* MALImage.m in Sources */,
