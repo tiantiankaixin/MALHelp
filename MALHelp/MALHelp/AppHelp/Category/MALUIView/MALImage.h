@@ -16,7 +16,7 @@
  *  @param anImage UIImage 对象
  *  @param type    1、彩图灰度化  2、深棕色  3、反色
  *
- *  @return <#return value description#>
+ *  @return UIImage *
  */
 + (UIImage*)grayscale:(UIImage*)anImage type:(int)type;
 

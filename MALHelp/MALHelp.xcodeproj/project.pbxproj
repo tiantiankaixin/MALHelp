@@ -25,6 +25,7 @@
 		6831F4C31B008678002FEF5F /* NSObject+SystemInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 6831F4C21B008678002FEF5F /* NSObject+SystemInfo.m */; };
 		6847B85A1AFB30F40065972A /* UIView+MALFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 6847B8591AFB30F40065972A /* UIView+MALFrame.m */; };
 		6847B85D1AFB31340065972A /* UIView+MALFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = 6847B85C1AFB31340065972A /* UIView+MALFunction.m */; };
+		68590AF51B6099390021D5F6 /* UIColor+MALColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 68590AF41B6099390021D5F6 /* UIColor+MALColor.m */; };
 		68600B431B5DF4BE00BA0FA8 /* MALTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 68600B421B5DF4BE00BA0FA8 /* MALTextView.m */; };
 		686DF3CE1AFB39DD0069292A /* BlurViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 686DF3CC1AFB39DD0069292A /* BlurViewController.m */; };
 		686DF3CF1AFB39DD0069292A /* BlurViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 686DF3CD1AFB39DD0069292A /* BlurViewController.xib */; };
@@ -93,6 +94,8 @@
 		6847B8591AFB30F40065972A /* UIView+MALFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MALFrame.m"; sourceTree = "<group>"; };
 		6847B85B1AFB31340065972A /* UIView+MALFunction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+MALFunction.h"; sourceTree = "<group>"; };
 		6847B85C1AFB31340065972A /* UIView+MALFunction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MALFunction.m"; sourceTree = "<group>"; };
+		68590AF31B6099390021D5F6 /* UIColor+MALColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+MALColor.h"; sourceTree = "<group>"; };
+		68590AF41B6099390021D5F6 /* UIColor+MALColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+MALColor.m"; sourceTree = "<group>"; };
 		68600B411B5DF4BE00BA0FA8 /* MALTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MALTextView.h; sourceTree = "<group>"; };
 		68600B421B5DF4BE00BA0FA8 /* MALTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MALTextView.m; sourceTree = "<group>"; };
 		686DF3CB1AFB39DD0069292A /* BlurViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlurViewController.h; sourceTree = "<group>"; };
@@ -279,6 +282,8 @@
 				6847B85C1AFB31340065972A /* UIView+MALFunction.m */,
 				68FEE28C1B3D2040003260B0 /* MALImage.h */,
 				68FEE28D1B3D2040003260B0 /* MALImage.m */,
+				68590AF31B6099390021D5F6 /* UIColor+MALColor.h */,
+				68590AF41B6099390021D5F6 /* UIColor+MALColor.m */,
 			);
 			path = MALUIView;
 			sourceTree = "<group>";
@@ -627,6 +632,7 @@
 				6847B85D1AFB31340065972A /* UIView+MALFunction.m in Sources */,
 				68E769111AA9376800DBED40 /* TestClass.m in Sources */,
 				6831F4BA1B005805002FEF5F /* ScrollowVCItemViewController.m in Sources */,
+				68590AF51B6099390021D5F6 /* UIColor+MALColor.m in Sources */,
 				688FBB2B1B0C8B50001FE2DC /* NSObject+FileManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

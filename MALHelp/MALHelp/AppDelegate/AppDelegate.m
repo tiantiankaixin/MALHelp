@@ -41,7 +41,7 @@
 - (void)doSomethingForTest
 {
     //注：dispatch_after 是在一定时间后将任务提交给主线程，但是不一定是立即执行的
-    MGCDAfter(2.0f, ^{
+    MGCDAfter(1.0f, ^{
     
         Log(@"dispatch_after 延时提交任务测试");
     });
