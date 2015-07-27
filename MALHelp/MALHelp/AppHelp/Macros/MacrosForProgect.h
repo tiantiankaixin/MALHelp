@@ -11,5 +11,6 @@
 
 #import "MacrosUnit.h"
 #import "UIViewController+MALNavigation.h"
+#import "NSObject+magic.h"
 
 #endif

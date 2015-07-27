@@ -24,4 +24,16 @@
  */
 + (void)sendSignal;
 
+/**
+ *  开始计时
+ */
++ (void)beginCountTime;
+
+/**
+ *  停止计时
+ *
+ *  @return 从beginCountTime执行开始到endConutTime执行完毕所经过时间
+ */
++ (double)endConutTime;
+
 @end

@@ -9,6 +9,7 @@
 #import "NSObject+magic.h"
 
 static dispatch_semaphore_t sem = nil;
+static CFAbsoluteTime beginTime = 0.0;
 
 @implementation NSObject (magic)
 
@@ -47,6 +48,16 @@ static dispatch_semaphore_t sem = nil;
     }
 }
 
+
++ (void)beginCountTime
+{
+    beginTime = CFAbsoluteTimeGetCurrent();
+}
+
++ (double)endConutTime
+{
+    return CFAbsoluteTimeGetCurrent() - beginTime;
+}
 
 
 @end

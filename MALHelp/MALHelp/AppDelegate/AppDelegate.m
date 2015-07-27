@@ -41,10 +41,18 @@
 - (void)doSomethingForTest
 {
     //注：dispatch_after 是在一定时间后将任务提交给主线程，但是不一定是立即执行的
-    MGCDAfter(1.0f, ^{
+    MGCDAfter(0.1f, ^{
     
         Log(@"dispatch_after 延时提交任务测试");
     });
+    
+    [NSObject beginCountTime];
+    NSInteger count = INT16_MAX;
+    while (count--)
+    {
+        
+    }
+    Log(@"从%d减到0经过了%f秒",INT16_MAX,[NSObject endConutTime]);
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
