@@ -8,6 +8,13 @@
 
 #import "ControllerScrollView.h"
 #import "UIView+MALFrame.h"
+
+@interface ControllerScrollView()
+
+@property (nonatomic, assign) BOOL isScrollow;//YES:代表是滑动cScrollView  NO:点击的分段控制控件
+
+@end
+
 @implementation ControllerScrollView
 
 - (id)initWithFrame:(CGRect)frame
@@ -71,13 +78,14 @@
     [self addSubview:self.cScrollView];
 }
 
-- (void)setUpControllerScrollViewWithSubVC:(NSMutableArray *)subVC
+- (void)setUpControllerScrollViewWithSubVC:(NSMutableArray *)subVC isPrestrain:(BOOL)isPrestrain
 {
-    [self setUpControllerScrollViewWithSubVC:subVC andCurrentIndex:0];
+    [self setUpControllerScrollViewWithSubVC:subVC andCurrentIndex:0 isPrestrain:isPrestrain];
 }
 
-- (void)setUpControllerScrollViewWithSubVC:(NSMutableArray *)subVC andCurrentIndex:(NSInteger)currentIndex
+- (void)setUpControllerScrollViewWithSubVC:(NSMutableArray *)subVC andCurrentIndex:(NSInteger)currentIndex isPrestrain:(BOOL)isPrestrain
 {
+    self.isPrestrain = isPrestrain;
     [self configueControllerScrollViewWithSubVC:subVC andCurrentIndex:currentIndex];
     [self loadSubView];
     [self viewScrollToIndex:currentIndex];
@@ -100,8 +108,11 @@
 - (void)loadSubView
 {
     [self addSubViewWithIndex:self.currentPage];
-    [self addSubViewWithIndex:self.currentPage - 1];
-    [self addSubViewWithIndex:self.currentPage + 1];
+    if (self.isPrestrain)
+    {
+        [self addSubViewWithIndex:self.currentPage - 1];
+        [self addSubViewWithIndex:self.currentPage + 1];
+    }
 }
 
 - (void)clearSubView
@@ -182,7 +193,7 @@
         }
         self.currentPage += changeIndex;
         [self loadSubView];
-        [self clearSubView];
+        //[self clearSubView];
         [self viewScrollToIndex:self.currentPage];
     }
 }

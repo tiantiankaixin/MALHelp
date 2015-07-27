@@ -41,6 +41,11 @@
 //    Log(@"%@  viewWillDisappear",self.vcTitle);
 //}
 
+- (void)dealloc
+{
+    NSLog(@"%@ dealloc",self.vcTitle);
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];

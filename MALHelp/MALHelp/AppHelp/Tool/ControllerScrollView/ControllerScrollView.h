@@ -24,10 +24,28 @@
 @property (nonatomic, assign) NSInteger pageNumber;
 @property (nonatomic, assign) NSInteger currentPage;
 @property (nonatomic, weak) id<ControllerScrollViewDelegate> csDelegate;
-@property (nonatomic, assign) BOOL isScrollow;//YES:代表是滑动cScrollView  NO:点击的分段控制控件
+
+/**
+ *  是否开启预加载 YES:开启
+ */
+@property (nonatomic, assign) BOOL isPrestrain;
 
 //+ (ControllerScrollView *)controllerScrollViewWithFrame:(CGRect)frame subViews:(NSMutableArray *)subViews;
-- (void)setUpControllerScrollViewWithSubVC:(NSMutableArray *)subVC;
-- (void)setUpControllerScrollViewWithSubVC:(NSMutableArray *)subVC andCurrentIndex:(NSInteger)currentIndex;
+/**
+ *  初始化控件
+ *
+ *  @param subVC       子viewcontroller数组
+ *  @param isPrestrain 是否开启预加载
+ */
+- (void)setUpControllerScrollViewWithSubVC:(NSMutableArray *)subVC isPrestrain:(BOOL)isPrestrain;
+
+/**
+ *  初始化控件
+ *
+ *  @param subVC        子viewcontroller数组
+ *  @param currentIndex 默认选择项
+ *  @param isPrestrain  是否开启预加载
+ */
+- (void)setUpControllerScrollViewWithSubVC:(NSMutableArray *)subVC andCurrentIndex:(NSInteger)currentIndex isPrestrain:(BOOL)isPrestrain;
 - (void)scrollToViewControllerWithIndex:(NSInteger)index;
 @end

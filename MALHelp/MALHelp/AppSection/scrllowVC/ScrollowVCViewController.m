@@ -70,7 +70,7 @@
         [childVCArray addObject:si];
     }
     self.controllerScrollView.csDelegate = self;
-    [self.controllerScrollView setUpControllerScrollViewWithSubVC:childVCArray andCurrentIndex:2];
+    [self.controllerScrollView setUpControllerScrollViewWithSubVC:childVCArray andCurrentIndex:2 isPrestrain:NO];
 }
 
 - (void)viewScrollWithRadio:(CGFloat)ratio
