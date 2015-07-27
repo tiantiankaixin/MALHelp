@@ -8,10 +8,12 @@
 
 #import "ProgressViewController.h"
 #import "MALProgressView.h"
+#import "TestPopViewController.h"
 
 @interface ProgressViewController ()
 
 @property (nonatomic, strong) MALProgressView *malProgress;
+@property (nonatomic, strong) TestPopViewController *testPop;
 
 - (IBAction)changeProgress:(UIButton *)sender;
 
@@ -29,13 +31,31 @@
     return _malProgress;
 }
 
+- (TestPopViewController *)testPop
+{
+    if (_testPop == nil)
+    {
+        _testPop = [[TestPopViewController alloc] init];
+    }
+    return _testPop;
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self configue];
+}
+
+- (void)configue
+{
     [self setCenterItemWithTitle:@"自定义进度条"];
     [self.view addSubview:self.malProgress];
     [self setProgressViewWithImage];
     //[self setProgressViewWithColor];
+    [self.testPop setTestPopBlock:^(NSString *str) {
+        
+        Log(@"%@",str);
+    }];
 }
 
 #pragma mark - 使用图片设置背景
@@ -64,6 +84,12 @@
     }
     nowProgress = _malProgress.m_progress;
     Log(@"====%.2f",nowProgress);
+}
+
+#pragma mark - pop test
+- (IBAction)showPopView:(UIButton *)sender
+{
+    [self.testPop showOrHiddenView];
 }
 
 - (void)didReceiveMemoryWarning
