@@ -1,10 +1,13 @@
 PODS:
   - GPUImage (0.1.6)
+  - KMCGeigerCounter (0.2.2)
 
 DEPENDENCIES:
   - GPUImage (~> 0.1.6)
+  - KMCGeigerCounter
 
 SPEC CHECKSUMS:
   GPUImage: 4675ce4a5370ca92fcea8623b2a08b8f0c51b940
+  KMCGeigerCounter: f8cc3c4aa19fc6f8cec168fb03b364b84c118a7a
 
-COCOAPODS: 0.34.4
+COCOAPODS: 0.37.2

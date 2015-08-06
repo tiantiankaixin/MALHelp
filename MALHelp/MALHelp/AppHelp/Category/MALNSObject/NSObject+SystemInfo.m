@@ -29,23 +29,6 @@
     return NO;
 }
 
-#pragma mark - 通过UIColor获得r、g、b、a 的值
-+ (M_RGBA)rgbaWithColor:(UIColor *)color
-{
-    M_RGBA mrgba;
-    CGColorRef cgColor = [color CGColor];
-    unsigned long numComponents = CGColorGetNumberOfComponents(cgColor);
-    if (numComponents >= 3)
-    {
-        const CGFloat *tmComponents = CGColorGetComponents(cgColor);
-        mrgba.m_r = tmComponents[0] * 255;
-        mrgba.m_g = tmComponents[1] * 255;
-        mrgba.m_b = tmComponents[2] * 255;
-        mrgba.m_a = tmComponents[3];
-    }
-    return mrgba;
-}
-
 #pragma mark - 初始化一个M_RGBA
 + (M_RGBA)mrgbaWithR:(CGFloat)r G:(CGFloat)g B:(CGFloat)b A:(CGFloat)a
 {
@@ -86,5 +69,59 @@
     
     return result;
 }
+
+#pragma mark - 通过UIColor获得r、g、b、a 的值
+M_RGBA RGBAFromUIColor(UIColor *color)
+{
+    return RGBAFromCGColor(color.CGColor);
+}
+
+M_RGBA RGBAFromCGColor(CGColorRef color)
+{
+    M_RGBA rgba;
+    
+    CGColorSpaceRef color_space = CGColorGetColorSpace(color);
+    CGColorSpaceModel color_space_model = CGColorSpaceGetModel(color_space);
+    const CGFloat *color_components = CGColorGetComponents(color);
+    size_t color_component_count = CGColorGetNumberOfComponents(color);
+    
+    switch (color_space_model)
+    {
+        case kCGColorSpaceModelMonochrome:
+        {
+            assert(color_component_count == 2);
+            rgba = (M_RGBA)
+            {
+                .m_r = color_components[0],
+                .m_g = color_components[0],
+                .m_b = color_components[0],
+                .m_a = color_components[1]
+            };
+            break;
+        }
+            
+        case kCGColorSpaceModelRGB:
+        {
+            assert(color_component_count == 4);
+            rgba = (M_RGBA)
+            {
+                .m_r = color_components[0],
+                .m_g = color_components[1],
+                .m_b = color_components[2],
+                .m_a = color_components[3]
+            };
+            break;
+        }
+            
+        default:
+        {
+            rgba = (M_RGBA) { 0, 0, 0, 0 };
+            break;
+        }
+    }
+    
+    return rgba;
+}
+
 
 @end

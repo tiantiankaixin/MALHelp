@@ -36,4 +36,11 @@
  */
 + (double)endConutTime;
 
+/**
+ *  在debug模式下执行block
+ *
+ *  @param block 被执行block
+ */
++ (void)handleOnDebugMode:(void(^)(void))block;
+
 @end

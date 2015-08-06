@@ -1,14 +1,14 @@
 //
-//  MALImage.h
-//  MALHelp
+//  UIImage+MALImage.h
+//  MALAnimationExample
 //
-//  Created by wangtian on 15/6/26.
+//  Created by wangtian on 15/8/5.
 //  Copyright (c) 2015年 wangtian. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@interface MALImage : UIImage
+@interface UIImage (MALImage)
 
 /**
  *  图像处理
@@ -22,5 +22,14 @@
 
 
 - (UIImage *)addlogoImage:(UIImage *)resizedImage;
+
+- (UIImage *)changeImageSize:(CGSize)newSize;
+
+/**
+ *  根据图片名称获得图片
+ *
+ *  @return UIImage
+ */
++ (UIImage *)imageWithName:(NSString *)name;
 
 @end

@@ -1,14 +1,14 @@
 //
-//  MALImage.m
-//  MALHelp
+//  UIImage+MALImage.m
+//  MALAnimationExample
 //
-//  Created by wangtian on 15/6/26.
+//  Created by wangtian on 15/8/5.
 //  Copyright (c) 2015年 wangtian. All rights reserved.
 //
 
-#import "MALImage.h"
+#import "UIImage+MALImage.h"
 
-@implementation MALImage
+@implementation UIImage (MALImage)
 
 + (UIImage*)grayscale:(UIImage*)anImage type:(int)type
 {
@@ -145,6 +145,38 @@
     UIGraphicsEndImageContext();
     return resultingImage;
     
+}
+
+#pragma mark - 修改图片尺寸
+- (UIImage *)changeImageSize:(CGSize)newSize
+{
+    // Create a graphics image context
+    UIGraphicsBeginImageContext(newSize);
+    // Tell the old image to draw in this new context, with the desired
+    // new size
+    [self drawInRect:CGRectMake(0,0,newSize.width,newSize.height)];
+    
+    // Get the new image from the context
+    UIImage* newImage = UIGraphicsGetImageFromCurrentImageContext();
+    
+    // End the context
+    UIGraphicsEndImageContext();
+    
+    // Return the new image.
+    return newImage;
+}
+
+#pragma mark - imageWithName
++ (UIImage *)imageWithName:(NSString *)name
+{
+    NSData *data;
+    name = [name stringByDeletingPathExtension];
+    if (!(data = UIImagePNGRepresentation([UIImage imageNamed:[NSString stringWithFormat:@"%@.png",name]])))
+    {
+        data = UIImageJPEGRepresentation([UIImage imageNamed:[NSString stringWithFormat:@"%@.jpg",name]], 1.0);
+    }
+    UIImage *image = [UIImage imageWithData:data];
+    return image;
 }
 
 @end

@@ -48,7 +48,7 @@ static CFAbsoluteTime beginTime = 0.0;
     }
 }
 
-
+#pragma mark - 计时
 + (void)beginCountTime
 {
     beginTime = CFAbsoluteTimeGetCurrent();
@@ -59,5 +59,11 @@ static CFAbsoluteTime beginTime = 0.0;
     return CFAbsoluteTimeGetCurrent() - beginTime;
 }
 
-
+#pragma mark - 在debug模式下执行block
++ (void)handleOnDebugMode:(void(^)(void))block
+{
+    #ifndef __OPTIMIZE__
+    block();
+    #endif
+}
 @end

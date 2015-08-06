@@ -29,15 +29,6 @@ typedef struct{
 + (BOOL)isFirstLaunch;
 
 /**
- *  通过UIColor得到r、g、b、a的值
- *
- *  @param color UIColor对象
- *
- *  @return M_RGB包含r、g、b、a值得结构体
- */
-+ (M_RGBA)rgbaWithColor:(UIColor *)color;
-
-/**
  *  初始化一个M_RGBA 值
  */
 + (M_RGBA)mrgbaWithR:(CGFloat)r G:(CGFloat)g B:(CGFloat)b A:(CGFloat)a;
@@ -47,5 +38,14 @@ typedef struct{
  *
  */
 + (UIViewController *)getCurrentVC;
+
+/**
+ *  获取UIColor对象的RGBA值
+ *
+ *  @param color UIColor
+ *
+ *  @return M_RGBA
+ */
+M_RGBA RGBAFromUIColor(UIColor *color);
 
 @end

@@ -10,6 +10,8 @@
 #import "MainViewController.h"
 #import "UIViewController+MALNavigation.h"
 #import "NSString+MALNSString.h"
+#import <KMCGeigerCounter.h>
+
 @interface AppDelegate ()
 
 @end
@@ -22,6 +24,7 @@
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor = [UIColor whiteColor];
     
+    [self configueApp];
     [self doSomethingForTest];
     [self setUpMainViewController];
     
@@ -29,10 +32,19 @@
     return YES;
 }
 
+#pragma mark - 配置应用
+- (void)configueApp
+{
+    //KMCGeigerCounter
+    #if !TARGET_IPHONE_SIMULATOR
+    [KMCGeigerCounter sharedGeigerCounter].enabled = YES;
+    #endif
+}
+
 - (void)setUpMainViewController
 {
     UINavigationController *na = [[UINavigationController alloc] initWithRootViewController:[[MainViewController alloc] init]];
-    //[UIViewController setNavigationBarBgImage:na andBgImage:[[UIImage imageNamed:@"About"] resizableImageWithCapInsets:UIEdgeInsetsMake(40, 0, 0, 0)]];
+//    [UIViewController setNavigationBarBgImage:na andBgImage:[[UIImage imageNamed:@"About"] resizableImageWithCapInsets:UIEdgeInsetsMake(40, 0, 0, 0)]];
     [UIViewController setBackItemTextColor:na itemColor:[UIColor redColor]];
     self.window.rootViewController = na;
 }
@@ -40,19 +52,7 @@
 #pragma mark - 做一些测试
 - (void)doSomethingForTest
 {
-    //注：dispatch_after 是在一定时间后将任务提交给主线程，但是不一定是立即执行的
-    MGCDAfter(0.1f, ^{
     
-        Log(@"dispatch_after 延时提交任务测试");
-    });
-    
-    [NSObject beginCountTime];
-    NSInteger count = INT16_MAX;
-    while (count--)
-    {
-        
-    }
-    Log(@"从%d减到0经过了%f秒",INT16_MAX,[NSObject endConutTime]);
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

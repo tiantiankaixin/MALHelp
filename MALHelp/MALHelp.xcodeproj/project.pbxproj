@@ -46,7 +46,7 @@
 		68E769181AA937AC00DBED40 /* RuntimeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 68E769161AA937AC00DBED40 /* RuntimeViewController.xib */; };
 		68E7691D1AA9387E00DBED40 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68E7691B1AA9387E00DBED40 /* MainViewController.m */; };
 		68E7691E1AA9387E00DBED40 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 68E7691C1AA9387E00DBED40 /* MainViewController.xib */; };
-		68FEE28E1B3D2040003260B0 /* MALImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 68FEE28D1B3D2040003260B0 /* MALImage.m */; };
+		68EAA8F01B732525005075AE /* UIImage+MALImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 68EAA8EF1B732525005075AE /* UIImage+MALImage.m */; };
 		92C84667BA3746C599CAC80C /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FD9E72F85032912ED7E00511 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -136,8 +136,8 @@
 		68E7691A1AA9387E00DBED40 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		68E7691B1AA9387E00DBED40 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		68E7691C1AA9387E00DBED40 /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
-		68FEE28C1B3D2040003260B0 /* MALImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MALImage.h; sourceTree = "<group>"; };
-		68FEE28D1B3D2040003260B0 /* MALImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MALImage.m; sourceTree = "<group>"; };
+		68EAA8EE1B732525005075AE /* UIImage+MALImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+MALImage.h"; sourceTree = "<group>"; };
+		68EAA8EF1B732525005075AE /* UIImage+MALImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+MALImage.m"; sourceTree = "<group>"; };
 		8EFD3B25C5D99DE3618F3A12 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		FD9E72F85032912ED7E00511 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -284,12 +284,12 @@
 		68038C431AA8284200CBE776 /* MALUIView */ = {
 			isa = PBXGroup;
 			children = (
+				68EAA8EE1B732525005075AE /* UIImage+MALImage.h */,
+				68EAA8EF1B732525005075AE /* UIImage+MALImage.m */,
 				6847B8581AFB30F40065972A /* UIView+MALFrame.h */,
 				6847B8591AFB30F40065972A /* UIView+MALFrame.m */,
 				6847B85B1AFB31340065972A /* UIView+MALFunction.h */,
 				6847B85C1AFB31340065972A /* UIView+MALFunction.m */,
-				68FEE28C1B3D2040003260B0 /* MALImage.h */,
-				68FEE28D1B3D2040003260B0 /* MALImage.m */,
 				68590AF31B6099390021D5F6 /* UIColor+MALColor.h */,
 				68590AF41B6099390021D5F6 /* UIColor+MALColor.m */,
 			);
@@ -635,12 +635,12 @@
 				6847B85A1AFB30F40065972A /* UIView+MALFrame.m in Sources */,
 				6831F4AF1B0055B6002FEF5F /* ControllerScrollView.m in Sources */,
 				68C8B11C1B65F64D00AA6C3A /* TestPopViewController.m in Sources */,
-				68FEE28E1B3D2040003260B0 /* MALImage.m in Sources */,
 				686DF3CE1AFB39DD0069292A /* BlurViewController.m in Sources */,
 				68D69BD41AFB68650005386B /* SetFrameViewController.m in Sources */,
 				68038C371AA8268600CBE776 /* AppDelegate.m in Sources */,
 				68CB73CF1B12E9A300A84206 /* NSObject+magic.m in Sources */,
 				68D69BCA1AFB63470005386B /* CustomBarItem.m in Sources */,
+				68EAA8F01B732525005075AE /* UIImage+MALImage.m in Sources */,
 				6831F4B51B0057F0002FEF5F /* ScrollowVCViewController.m in Sources */,
 				68E769171AA937AC00DBED40 /* RuntimeViewController.m in Sources */,
 				68E769121AA9376800DBED40 /* TestClassTwo.m in Sources */,
