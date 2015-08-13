@@ -28,6 +28,7 @@
 		686DF3CE1AFB39DD0069292A /* BlurViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 686DF3CC1AFB39DD0069292A /* BlurViewController.m */; };
 		686DF3CF1AFB39DD0069292A /* BlurViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 686DF3CD1AFB39DD0069292A /* BlurViewController.xib */; };
 		686DF3D31AFB3E3C0069292A /* mohu.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 686DF3D21AFB3E3C0069292A /* mohu.jpg */; };
+		68774D661B7C6300007A8FD9 /* NSNull+MALInternalNullExtention.m in Sources */ = {isa = PBXBuildFile; fileRef = 68774D651B7C6300007A8FD9 /* NSNull+MALInternalNullExtention.m */; };
 		688FBB2B1B0C8B50001FE2DC /* NSObject+FileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 688FBB2A1B0C8B50001FE2DC /* NSObject+FileManager.m */; };
 		68C8B1111B65E0EC00AA6C3A /* PopFromBottom.m in Sources */ = {isa = PBXBuildFile; fileRef = 68C8B10F1B65E0EC00AA6C3A /* PopFromBottom.m */; };
 		68C8B1171B65F59A00AA6C3A /* ProgressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68C8B1151B65F59A00AA6C3A /* ProgressViewController.m */; };
@@ -102,6 +103,8 @@
 		686DF3CC1AFB39DD0069292A /* BlurViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlurViewController.m; sourceTree = "<group>"; };
 		686DF3CD1AFB39DD0069292A /* BlurViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BlurViewController.xib; sourceTree = "<group>"; };
 		686DF3D21AFB3E3C0069292A /* mohu.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mohu.jpg; sourceTree = "<group>"; };
+		68774D641B7C6300007A8FD9 /* NSNull+MALInternalNullExtention.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNull+MALInternalNullExtention.h"; sourceTree = "<group>"; };
+		68774D651B7C6300007A8FD9 /* NSNull+MALInternalNullExtention.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNull+MALInternalNullExtention.m"; sourceTree = "<group>"; };
 		688FBB291B0C8B50001FE2DC /* NSObject+FileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+FileManager.h"; sourceTree = "<group>"; };
 		688FBB2A1B0C8B50001FE2DC /* NSObject+FileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+FileManager.m"; sourceTree = "<group>"; };
 		68C8B10E1B65E0EC00AA6C3A /* PopFromBottom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopFromBottom.h; sourceTree = "<group>"; };
@@ -277,6 +280,8 @@
 				688FBB2A1B0C8B50001FE2DC /* NSObject+FileManager.m */,
 				68CB73CD1B12E9A300A84206 /* NSObject+magic.h */,
 				68CB73CE1B12E9A300A84206 /* NSObject+magic.m */,
+				68774D641B7C6300007A8FD9 /* NSNull+MALInternalNullExtention.h */,
+				68774D651B7C6300007A8FD9 /* NSNull+MALInternalNullExtention.m */,
 			);
 			path = MALNSObject;
 			sourceTree = "<group>";
@@ -644,6 +649,7 @@
 				6831F4B51B0057F0002FEF5F /* ScrollowVCViewController.m in Sources */,
 				68E769171AA937AC00DBED40 /* RuntimeViewController.m in Sources */,
 				68E769121AA9376800DBED40 /* TestClassTwo.m in Sources */,
+				68774D661B7C6300007A8FD9 /* NSNull+MALInternalNullExtention.m in Sources */,
 				68D69BCE1AFB63670005386B /* UIViewController+MALNavigation.m in Sources */,
 				68E7691D1AA9387E00DBED40 /* MainViewController.m in Sources */,
 				68038C111AA8265000CBE776 /* main.m in Sources */,

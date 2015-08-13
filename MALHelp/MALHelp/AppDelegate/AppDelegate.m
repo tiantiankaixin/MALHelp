@@ -11,6 +11,7 @@
 #import "UIViewController+MALNavigation.h"
 #import "NSString+MALNSString.h"
 #import <KMCGeigerCounter.h>
+#import "NSNull+MALInternalNullExtention.h"
 
 @interface AppDelegate ()
 
@@ -52,7 +53,11 @@
 #pragma mark - 做一些测试
 - (void)doSomethingForTest
 {
-    
+    NSNull *null = [NSNull null];
+    NSDictionary *dic = @{@"key":[NSNull null]};
+    id a = dic[@"key"];
+    id b = [a objectForKey:@"key"];
+    id c = [a firstObject];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

@@ -13,4 +13,6 @@
 #import "UIViewController+MALNavigation.h"
 #import "NSObject+magic.h"
 
+#define Test 2
+
 #endif
