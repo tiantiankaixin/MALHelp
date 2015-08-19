@@ -60,12 +60,11 @@
         const char* name_s = sel_getName(method_getName(temp_f));
         int arguments = method_getNumberOfArguments(temp_f);
         const char* encoding = method_getTypeEncoding(temp_f);
-        Log(@"方法名：%@,参数个数：%d,编码方式：%@",[NSString stringWithUTF8String:name_s],
+      NSLog(@"方法名：%@,参数个数：%d,编码方式：%@",[NSString stringWithUTF8String:name_s],
               arguments,
               [NSString stringWithUTF8String:encoding]);
     }
     free(mothList_f);
 }
-
 
 @end

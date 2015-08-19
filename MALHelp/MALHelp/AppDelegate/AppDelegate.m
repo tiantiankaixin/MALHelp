@@ -12,6 +12,10 @@
 #import "NSString+MALNSString.h"
 #import <KMCGeigerCounter.h>
 #import "NSNull+MALInternalNullExtention.h"
+#import "NSObject+SystemInfo.h"
+#import "NSObject+MALRunTime.h"
+#import "RunTimeClass.h"
+#import <objc/message.h>
 
 @interface AppDelegate ()
 
@@ -37,9 +41,9 @@
 - (void)configueApp
 {
     //KMCGeigerCounter
-    #if !TARGET_IPHONE_SIMULATOR
-    [KMCGeigerCounter sharedGeigerCounter].enabled = YES;
-    #endif
+//    #if !TARGET_IPHONE_SIMULATOR
+//    [KMCGeigerCounter sharedGeigerCounter].enabled = YES;
+//    #endif
 }
 
 - (void)setUpMainViewController
@@ -53,11 +57,22 @@
 #pragma mark - 做一些测试
 - (void)doSomethingForTest
 {
-    NSNull *null = [NSNull null];
-    NSDictionary *dic = @{@"key":[NSNull null]};
-    id a = dic[@"key"];
-    id b = [a objectForKey:@"key"];
-    id c = [a firstObject];
+    //异常处理
+//    NSNull *null = [NSNull null];
+//    NSDictionary *dic = @{@"key":[NSNull null]};
+//    id a = dic[@"key"];
+//    id b = [a objectForKey:@"key"];
+//    id c = [a firstObject];
+    
+    //进制
+//    NSInteger test1 = [NSObject getNumberWithIndex:1 andJinzhi:60 number:153];
+//    NSInteger test2 = [NSObject getNumberWithIndex:2 andJinzhi:10 number:123];
+//    NSInteger test3 = [NSObject getNumberWithIndex:3 andJinzhi:10 number:369];
+    
+    NSString *str = nil;
+    NSInteger length = str.length;
+    Log(@"====%lu",length);
+    
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

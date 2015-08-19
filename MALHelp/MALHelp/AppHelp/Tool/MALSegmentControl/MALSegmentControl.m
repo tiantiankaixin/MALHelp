@@ -141,6 +141,7 @@
 #pragma mark - 设置scrollView的一些属性
 - (void)setUpScrollView
 {
+    self.scrollsToTop = NO;
     self.showsHorizontalScrollIndicator = NO;
     self.showsVerticalScrollIndicator = NO;
     self.bounces = NO;

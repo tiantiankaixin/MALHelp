@@ -75,6 +75,7 @@
     self.cScrollView.pagingEnabled = YES;
     self.cScrollView.delegate = self;
     self.cScrollView.bounces = NO;
+    self.cScrollView.scrollsToTop = NO;
     [self addSubview:self.cScrollView];
 }
 
@@ -193,7 +194,7 @@
         }
         self.currentPage += changeIndex;
         [self loadSubView];
-        //[self clearSubView];
+        [self clearSubView];
         [self viewScrollToIndex:self.currentPage];
     }
 }

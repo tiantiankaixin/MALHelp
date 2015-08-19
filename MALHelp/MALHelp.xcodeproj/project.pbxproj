@@ -21,6 +21,7 @@
 		6831F4BA1B005805002FEF5F /* ScrollowVCItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6831F4B81B005805002FEF5F /* ScrollowVCItemViewController.m */; };
 		6831F4BB1B005805002FEF5F /* ScrollowVCItemViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6831F4B91B005805002FEF5F /* ScrollowVCItemViewController.xib */; };
 		6831F4C31B008678002FEF5F /* NSObject+SystemInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 6831F4C21B008678002FEF5F /* NSObject+SystemInfo.m */; };
+		6836F6C81B7D9487007A6D0C /* RunTimeClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 6836F6C71B7D9487007A6D0C /* RunTimeClass.m */; };
 		6847B85A1AFB30F40065972A /* UIView+MALFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 6847B8591AFB30F40065972A /* UIView+MALFrame.m */; };
 		6847B85D1AFB31340065972A /* UIView+MALFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = 6847B85C1AFB31340065972A /* UIView+MALFunction.m */; };
 		68590AF51B6099390021D5F6 /* UIColor+MALColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 68590AF41B6099390021D5F6 /* UIColor+MALColor.m */; };
@@ -91,6 +92,8 @@
 		6831F4B91B005805002FEF5F /* ScrollowVCItemViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ScrollowVCItemViewController.xib; sourceTree = "<group>"; };
 		6831F4C11B008678002FEF5F /* NSObject+SystemInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SystemInfo.h"; sourceTree = "<group>"; };
 		6831F4C21B008678002FEF5F /* NSObject+SystemInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SystemInfo.m"; sourceTree = "<group>"; };
+		6836F6C61B7D9487007A6D0C /* RunTimeClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RunTimeClass.h; sourceTree = "<group>"; };
+		6836F6C71B7D9487007A6D0C /* RunTimeClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RunTimeClass.m; sourceTree = "<group>"; };
 		6847B8581AFB30F40065972A /* UIView+MALFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+MALFrame.h"; sourceTree = "<group>"; };
 		6847B8591AFB30F40065972A /* UIView+MALFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MALFrame.m"; sourceTree = "<group>"; };
 		6847B85B1AFB31340065972A /* UIView+MALFunction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+MALFunction.h"; sourceTree = "<group>"; };
@@ -231,6 +234,8 @@
 			children = (
 				68038C351AA8268600CBE776 /* AppDelegate.h */,
 				68038C361AA8268600CBE776 /* AppDelegate.m */,
+				6836F6C61B7D9487007A6D0C /* RunTimeClass.h */,
+				6836F6C71B7D9487007A6D0C /* RunTimeClass.m */,
 			);
 			path = AppDelegate;
 			sourceTree = "<group>";
@@ -662,6 +667,7 @@
 				68E769111AA9376800DBED40 /* TestClass.m in Sources */,
 				6831F4BA1B005805002FEF5F /* ScrollowVCItemViewController.m in Sources */,
 				68590AF51B6099390021D5F6 /* UIColor+MALColor.m in Sources */,
+				6836F6C81B7D9487007A6D0C /* RunTimeClass.m in Sources */,
 				688FBB2B1B0C8B50001FE2DC /* NSObject+FileManager.m in Sources */,
 				68C8B1111B65E0EC00AA6C3A /* PopFromBottom.m in Sources */,
 			);

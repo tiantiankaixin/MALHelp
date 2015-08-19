@@ -7,6 +7,7 @@
 //
 
 #import "NSObject+SystemInfo.h"
+#import <math.h>
 
 @implementation NSObject (SystemInfo)
 
@@ -123,5 +124,12 @@ M_RGBA RGBAFromCGColor(CGColorRef color)
     return rgba;
 }
 
++ (NSInteger)getNumberWithIndex:(NSInteger)index andJinzhi:(NSInteger)jinzhi number:(NSInteger)number
+{
+    NSInteger result;
+    result = number % (NSInteger)pow(jinzhi, index);
+    result = result / (NSInteger)pow(jinzhi, index - 1);
+    return result;
+}
 
 @end

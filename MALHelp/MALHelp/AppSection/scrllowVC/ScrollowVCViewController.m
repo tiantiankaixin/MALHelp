@@ -70,7 +70,7 @@
         [childVCArray addObject:si];
     }
     self.controllerScrollView.csDelegate = self;
-    [self.controllerScrollView setUpControllerScrollViewWithSubVC:childVCArray andCurrentIndex:2 isPrestrain:NO];
+    [self.controllerScrollView setUpControllerScrollViewWithSubVC:childVCArray andCurrentIndex:2 isPrestrain:YES];
 }
 
 - (void)viewScrollWithRadio:(CGFloat)ratio
@@ -80,7 +80,18 @@
 
 - (void)viewScrollToIndex:(NSInteger)currentIndex andCurrentVC:(UIViewController *)currentVC
 {
-    Log(@"%d",(int)currentIndex);
+    Log(@"滑动到第%d页了",(int)currentIndex);
+    [self.childViewControllers enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+        
+        if (idx == currentIndex)
+        {
+            [obj vcDidShow];
+        }
+        else
+        {
+            [obj vcDidHidden];
+        }
+    }];
 }
 
 - (void)dealloc

@@ -12,4 +12,9 @@
 
 @property (nonatomic, copy) NSString *vcTitle;
 
+- (void)vcDidShow;
+
+- (void)vcDidHidden;
+
+
 @end

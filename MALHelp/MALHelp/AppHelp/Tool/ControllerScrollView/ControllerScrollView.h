@@ -13,7 +13,6 @@
 @optional
 - (void)viewScrollWithRadio:(CGFloat)ratio;
 - (void)viewScrollToIndex:(NSInteger)currentIndex andCurrentVC:(UIViewController *)currentVC;
-
 @end
 
 @interface ControllerScrollView : UIView<UIScrollViewDelegate>

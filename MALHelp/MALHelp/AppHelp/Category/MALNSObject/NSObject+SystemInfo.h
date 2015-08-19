@@ -48,4 +48,15 @@ typedef struct{
  */
 M_RGBA RGBAFromUIColor(UIColor *color);
 
+
+/**
+ *  根据进制和下标或者  位于下表位置的数字  eg  10 (index 2 jinzhi 10 )得到的就是1
+ *
+ *  @param index  下标 从1开始
+ *  @param jinzhi 10 8 2 16 ...
+ *
+ *  @return NSInteger
+ */
++ (NSInteger)getNumberWithIndex:(NSInteger)index andJinzhi:(NSInteger)jinzhi number:(NSInteger)number;
+
 @end
