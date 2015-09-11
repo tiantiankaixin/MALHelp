@@ -1,13 +1,16 @@
 PODS:
   - GPUImage (0.1.6)
   - KMCGeigerCounter (0.2.2)
+  - TPKeyboardAvoiding (1.2.9)
 
 DEPENDENCIES:
   - GPUImage (~> 0.1.6)
   - KMCGeigerCounter
+  - TPKeyboardAvoiding (~> 1.2.9)
 
 SPEC CHECKSUMS:
   GPUImage: 4675ce4a5370ca92fcea8623b2a08b8f0c51b940
   KMCGeigerCounter: f8cc3c4aa19fc6f8cec168fb03b364b84c118a7a
+  TPKeyboardAvoiding: ff1ee4e5a5a0c119b965552af8f183868ea20207
 
 COCOAPODS: 0.37.2

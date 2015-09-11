@@ -8,17 +8,15 @@
 
 #import "CustomBarItem.h"
 #define Default_Offset 10
-#define TitleViewSize CGSizeMake(70, 30)//用NSString设置item时 item的尺寸
+#define TitleViewSize CGSizeMake(71, 30)//用NSString设置item时 item的尺寸
 @implementation CustomBarItem
 
 - (void)initCustomItemWithType:(ItemType)type andSize:(CGSize)size
 {
     self.isCustomView = NO;
     self.itemType = type;
-    self.items = [[NSMutableArray alloc] init];
     self.contentBarItem = [UIButton buttonWithType:UIButtonTypeCustom];
     self.contentBarItem.frame = CGRectMake(0, 0, size.width, size.height);
-    [self.items addObject:self.contentBarItem];
  }
 
 + (CustomBarItem *)itemWithTitle:(NSString *)title textColor:(UIColor *)color font:(UIFont *)font itemType:(ItemType)type

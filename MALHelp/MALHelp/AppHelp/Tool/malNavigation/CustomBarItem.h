@@ -19,9 +19,7 @@ typedef enum{
 
 @interface CustomBarItem : NSObject
 
-@property (nonatomic, strong) UIBarButtonItem *fixBarItem;
 @property (nonatomic, strong) UIButton *contentBarItem;
-@property (nonatomic, strong) NSMutableArray *items;
 @property (nonatomic, assign) ItemType itemType;
 @property (nonatomic, strong) UIView *customView;
 @property (nonatomic, assign) BOOL isCustomView;
