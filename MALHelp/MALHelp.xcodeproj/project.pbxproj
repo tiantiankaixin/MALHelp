@@ -49,6 +49,10 @@
 		68E7691D1AA9387E00DBED40 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68E7691B1AA9387E00DBED40 /* MainViewController.m */; };
 		68E7691E1AA9387E00DBED40 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 68E7691C1AA9387E00DBED40 /* MainViewController.xib */; };
 		68EAA8F01B732525005075AE /* UIImage+MALImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 68EAA8EF1B732525005075AE /* UIImage+MALImage.m */; };
+		68FB47F21BFB16F600BE7320 /* BarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 68FB47F11BFB16F600BE7320 /* BarItem.m */; };
+		68FB47F51BFB18D800BE7320 /* UCBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 68FB47F41BFB18D800BE7320 /* UCBar.m */; };
+		68FB47FA1BFB1F2000BE7320 /* UCTopBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68FB47F81BFB1F2000BE7320 /* UCTopBarViewController.m */; };
+		68FB47FB1BFB1F2000BE7320 /* UCTopBarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 68FB47F91BFB1F2000BE7320 /* UCTopBarViewController.xib */; };
 		92C84667BA3746C599CAC80C /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FD9E72F85032912ED7E00511 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -144,6 +148,13 @@
 		68E7691C1AA9387E00DBED40 /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
 		68EAA8EE1B732525005075AE /* UIImage+MALImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+MALImage.h"; sourceTree = "<group>"; };
 		68EAA8EF1B732525005075AE /* UIImage+MALImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+MALImage.m"; sourceTree = "<group>"; };
+		68FB47F01BFB16F600BE7320 /* BarItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BarItem.h; sourceTree = "<group>"; };
+		68FB47F11BFB16F600BE7320 /* BarItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BarItem.m; sourceTree = "<group>"; };
+		68FB47F31BFB18D800BE7320 /* UCBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UCBar.h; sourceTree = "<group>"; };
+		68FB47F41BFB18D800BE7320 /* UCBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UCBar.m; sourceTree = "<group>"; };
+		68FB47F71BFB1F2000BE7320 /* UCTopBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UCTopBarViewController.h; sourceTree = "<group>"; };
+		68FB47F81BFB1F2000BE7320 /* UCTopBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UCTopBarViewController.m; sourceTree = "<group>"; };
+		68FB47F91BFB1F2000BE7320 /* UCTopBarViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UCTopBarViewController.xib; sourceTree = "<group>"; };
 		8EFD3B25C5D99DE3618F3A12 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		FD9E72F85032912ED7E00511 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -244,6 +255,7 @@
 			isa = PBXGroup;
 			children = (
 				68E769191AA9386D00DBED40 /* main */,
+				68FB47F61BFB1F0E00BE7320 /* ucTopBar */,
 				6831F4B11B0057D2002FEF5F /* scrllowVC */,
 				68D69BD01AFB68530005386B /* setFrame */,
 				686DF3CA1AFB39CA0069292A /* mohuxiaoguo */,
@@ -318,6 +330,7 @@
 		68038C491AA82B6600CBE776 /* Tool */ = {
 			isa = PBXGroup;
 			children = (
+				68FB47EF1BFB16CE00BE7320 /* ucbar */,
 				68C8B10D1B65E0C400AA6C3A /* MALPopVIew */,
 				68600B401B5DF4BE00BA0FA8 /* MALTextView */,
 				6831F4A91B0055B6002FEF5F /* ControllerScrollView */,
@@ -479,6 +492,27 @@
 			path = main;
 			sourceTree = "<group>";
 		};
+		68FB47EF1BFB16CE00BE7320 /* ucbar */ = {
+			isa = PBXGroup;
+			children = (
+				68FB47F01BFB16F600BE7320 /* BarItem.h */,
+				68FB47F11BFB16F600BE7320 /* BarItem.m */,
+				68FB47F31BFB18D800BE7320 /* UCBar.h */,
+				68FB47F41BFB18D800BE7320 /* UCBar.m */,
+			);
+			path = ucbar;
+			sourceTree = "<group>";
+		};
+		68FB47F61BFB1F0E00BE7320 /* ucTopBar */ = {
+			isa = PBXGroup;
+			children = (
+				68FB47F71BFB1F2000BE7320 /* UCTopBarViewController.h */,
+				68FB47F81BFB1F2000BE7320 /* UCTopBarViewController.m */,
+				68FB47F91BFB1F2000BE7320 /* UCTopBarViewController.xib */,
+			);
+			path = ucTopBar;
+			sourceTree = "<group>";
+		};
 		73EB980F4D91FA33A8802783 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -581,6 +615,7 @@
 			files = (
 				6831F4BB1B005805002FEF5F /* ScrollowVCItemViewController.xib in Resources */,
 				68038C1F1AA8265000CBE776 /* LaunchScreen.xib in Resources */,
+				68FB47FB1BFB1F2000BE7320 /* UCTopBarViewController.xib in Resources */,
 				68D69BD51AFB68650005386B /* SetFrameViewController.xib in Resources */,
 				686DF3CF1AFB39DD0069292A /* BlurViewController.xib in Resources */,
 				68C8B11D1B65F64D00AA6C3A /* TestPopViewController.xib in Resources */,
@@ -655,6 +690,7 @@
 				68E769171AA937AC00DBED40 /* RuntimeViewController.m in Sources */,
 				68E769121AA9376800DBED40 /* TestClassTwo.m in Sources */,
 				68774D661B7C6300007A8FD9 /* NSNull+MALInternalNullExtention.m in Sources */,
+				68FB47F51BFB18D800BE7320 /* UCBar.m in Sources */,
 				68D69BCE1AFB63670005386B /* UIViewController+MALNavigation.m in Sources */,
 				68E7691D1AA9387E00DBED40 /* MainViewController.m in Sources */,
 				68038C111AA8265000CBE776 /* main.m in Sources */,
@@ -662,11 +698,13 @@
 				6831F4B01B0055B6002FEF5F /* MALSegmentControl.m in Sources */,
 				681343801AB2B073001037A6 /* MALProgressView.m in Sources */,
 				68E7690A1AA9350200DBED40 /* NSObject+MALRunTime.m in Sources */,
+				68FB47FA1BFB1F2000BE7320 /* UCTopBarViewController.m in Sources */,
 				6831F4C31B008678002FEF5F /* NSObject+SystemInfo.m in Sources */,
 				6847B85D1AFB31340065972A /* UIView+MALFunction.m in Sources */,
 				68E769111AA9376800DBED40 /* TestClass.m in Sources */,
 				6831F4BA1B005805002FEF5F /* ScrollowVCItemViewController.m in Sources */,
 				68590AF51B6099390021D5F6 /* UIColor+MALColor.m in Sources */,
+				68FB47F21BFB16F600BE7320 /* BarItem.m in Sources */,
 				6836F6C81B7D9487007A6D0C /* RunTimeClass.m in Sources */,
 				688FBB2B1B0C8B50001FE2DC /* NSObject+FileManager.m in Sources */,
 				68C8B1111B65E0EC00AA6C3A /* PopFromBottom.m in Sources */,

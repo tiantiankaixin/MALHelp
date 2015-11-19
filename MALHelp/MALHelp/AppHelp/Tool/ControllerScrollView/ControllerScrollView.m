@@ -170,7 +170,7 @@
         return;
     }
     CGFloat ratio = contentOffSetX / WIDTH(self.cScrollView);
-    //Log(@"%f",ratio);
+    Log(@"%f",ratio);
     if (self.isScrollow) {//如果是点击分段控制控件切换controller的时候不需要再反过来更新分段控制控件的选项了
         
         if ([self.csDelegate respondsToSelector:@selector(viewScrollWithRadio:)]) {

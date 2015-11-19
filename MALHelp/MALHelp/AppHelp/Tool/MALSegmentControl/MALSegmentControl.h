@@ -38,12 +38,12 @@ typedef void(^MutableSegBlock)(NSInteger);
 @property (nonatomic, assign)   CGFloat maxScale;
 
 /**
- *  是否支持变色
+ *  是否支持变色  默认为NO
  */
 @property (nonatomic, assign) BOOL isChangeColor;
 
 /**
- *  是否支持缩放
+ *  是否支持缩放  默认为NO
  */
 @property (nonatomic, assign) BOOL isScale;
 

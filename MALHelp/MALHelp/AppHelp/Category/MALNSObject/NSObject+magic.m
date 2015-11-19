@@ -13,7 +13,7 @@ static CFAbsoluteTime beginTime = 0.0;
 
 @implementation NSObject (magic)
 
-#pragma mark - 延时执行handleBlock里的代码(当收到信号时执行sendSignal)，如果超时执行timeOutBlock里的代码
+#pragma mark - 延时执行handleBlock里的代码(当收到信号时执行通过sendSignal发送)，如果超时执行timeOutBlock里的代码
 + (void)waitUntilReciveSignalWithTimeout:(NSInteger)time timeOutBlock:(void (^)())timeOutBlock handleBlock:(void (^)())handleBlock
 {
     sem = dispatch_semaphore_create(0);

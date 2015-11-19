@@ -12,6 +12,7 @@
 #import "BlurViewController.h"
 #import "SetFrameViewController.h"
 #import "ScrollowVCViewController.h"
+#import "UCTopBarViewController.h"
 
 @interface MainViewController ()
 
@@ -56,6 +57,7 @@
     [self addARowWithTitle:@"模糊效果" andClass:[BlurViewController class]];
     [self addARowWithTitle:@"简化设置frame代码" andClass:[SetFrameViewController class]];
     [self addARowWithTitle:@"滑动切换VC" andClass:[ScrollowVCViewController class]];
+    [self addARowWithTitle:@"模仿UC新闻上面滑动导航条的效果" andClass:[UCTopBarViewController class]];
 }
 
 - (void)addARowWithTitle:(NSString *)title andClass:(Class)class
