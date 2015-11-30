@@ -46,7 +46,7 @@
     CGRect segFrame = self.segView.bounds;
     segFrame.size.width = IOS_SCREEN.size.width;
     segFrame.size.height = IOS_SCREEN.size.width * (1 / 8.0);
-    _segControl = [MALSegmentControl getControlWithTitlesArray:titleArray andFrame:segFrame selectIndex:2 andControlType:downSideLineControl buttonWidth:SCREEN_WIDTH / 4];
+    _segControl = [MALSegmentControl getControlWithTitlesArray:titleArray andFrame:segFrame selectIndex:0 andControlType:downSideLineControl buttonWidth:SCREEN_WIDTH / 4];
     _segControl.isChangeColor = YES;
     _segControl.isScale = YES;
     [self.segView addSubview:_segControl];
@@ -70,7 +70,7 @@
         [childVCArray addObject:si];
     }
     self.controllerScrollView.csDelegate = self;
-    [self.controllerScrollView setUpControllerScrollViewWithSubVC:childVCArray andCurrentIndex:2 isPrestrain:YES];
+    [self.controllerScrollView setUpControllerScrollViewWithSubVC:childVCArray andCurrentIndex:0 isPrestrain:YES];
 }
 
 - (void)viewScrollWithRadio:(CGFloat)ratio
