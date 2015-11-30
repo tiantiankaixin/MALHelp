@@ -14,7 +14,7 @@
 //defaultControl 格式下使用的属性
 #define bgView_Margin 4 //滑块与边界的距离的2倍
 #define bgView_CornerRadius 4//滑块圆角大小
-#define Max_Scale 2
+#define Max_Scale 1.5
 @interface MALSegmentControl()<UIScrollViewDelegate>
 
 @property (nonatomic,strong) NSMutableArray *buttonArray;

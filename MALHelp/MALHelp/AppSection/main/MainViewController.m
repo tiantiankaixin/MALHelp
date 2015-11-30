@@ -52,10 +52,10 @@
 #pragma mark - 配置数据
 - (void)configueDataSource
 {
-    [self addARowWithTitle:@"runTime demo" andClass:[RuntimeViewController class]];
+    //[self addARowWithTitle:@"runTime demo" andClass:[RuntimeViewController class]];
     [self addARowWithTitle:@"自定义进度条" andClass:[ProgressViewController class]];
     [self addARowWithTitle:@"模糊效果" andClass:[BlurViewController class]];
-    [self addARowWithTitle:@"简化设置frame代码" andClass:[SetFrameViewController class]];
+    //[self addARowWithTitle:@"简化设置frame代码" andClass:[SetFrameViewController class]];
     [self addARowWithTitle:@"滑动切换VC" andClass:[ScrollowVCViewController class]];
     [self addARowWithTitle:@"模仿UC新闻上面滑动导航条的效果" andClass:[UCTopBarViewController class]];
 }

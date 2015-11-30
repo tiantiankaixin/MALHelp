@@ -12,6 +12,7 @@
 @interface UCBar()<UIScrollViewDelegate>
 
 @property (nonatomic, assign) NSInteger onePageNO;//一页tab数目
+@property (nonatomic, assign) CGFloat btnWidth;
 
 @end
 
@@ -43,6 +44,7 @@
     
     bar.onePageNO = SCREEN_WIDTH / btnWidth;
     bar.selectIndex = selectIndex;
+    bar.btnWidth = btnWidth;
     [bar addItemWithTitleArray:titleArray btnWidth:btnWidth];
     
     return bar;
@@ -102,7 +104,8 @@
         
         if (finished)
         {
-            self.selectIndex = index;
+            [self updateContentoffSetWithFromIndex:self.selectIndex toIndex:index];
+             self.selectIndex = index;
             if (self.selectIndexBlock)
             {
                 self.selectIndexBlock(self.selectIndex);
@@ -131,16 +134,56 @@
             BarItem *toItem = self.itemArray[self.selectIndex - 1];
             [toItem changeItemWithProgress:changeProgress swipDirection:mRight isFromItem:NO];
         }
-        else
-        {
-            
-        }
     }
     NSInteger tempRatio = ratio;
     CGFloat ftempRatio = tempRatio;
     if (ftempRatio == ratio)
     {
+        [self updateContentoffSetWithFromIndex:self.selectIndex toIndex:tempRatio];
         self.selectIndex = tempRatio;
+    }
+}
+
+- (void)updateContentoffSetWithFromIndex:(NSInteger)fromIndex toIndex:(NSInteger)toIndex
+{
+    NSInteger halfNumbers = self.onePageNO / 2;
+    if (self.onePageNO % 2 != 0)
+    {
+        halfNumbers++;
+    }
+    NSInteger itemNumbers = self.itemArray.count;
+    NSInteger leftItemNo = toIndex;//选中item左侧item数量
+    NSInteger rightItemNo = itemNumbers - leftItemNo - 1;//右侧item数量
+    CGFloat scrollViewMaxContentOffsetX = (self.itemArray.count - self.onePageNO) * self.btnWidth;//scrollView最大的contentOffsetx   最小是0
+    if (fromIndex < toIndex)//向左滑动
+    {
+        if (leftItemNo >= halfNumbers)
+        {
+            CGFloat correctContentOffsetX = (toIndex - 2) * self.btnWidth;
+            if (correctContentOffsetX > scrollViewMaxContentOffsetX)
+            {
+                correctContentOffsetX = scrollViewMaxContentOffsetX;
+            }
+            if (correctContentOffsetX <= scrollViewMaxContentOffsetX)
+            {
+                [self.contentScrollView setContentOffset:CGPointMake(correctContentOffsetX, 0) animated:YES];
+            }
+        }
+    }
+    else
+    {
+        if (rightItemNo >= halfNumbers)
+        {
+            CGFloat correctContentOffsetX = (toIndex - 2) * self.btnWidth;
+            if(correctContentOffsetX < 0)
+            {
+                correctContentOffsetX = 0;
+            }
+            if (correctContentOffsetX >= 0)
+            {
+                  [self.contentScrollView setContentOffset:CGPointMake(correctContentOffsetX, 0) animated:YES];
+            }
+        }
     }
 }
 

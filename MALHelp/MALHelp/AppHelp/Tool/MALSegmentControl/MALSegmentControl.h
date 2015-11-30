@@ -33,7 +33,7 @@ typedef void(^MutableSegBlock)(NSInteger);
 @property (nonatomic, assign)   CGFloat bgLineHegiht;
 @property (nonatomic, assign)   CGFloat lineHeight;
 /**
- *  seg上文字最大放大比例 默认值为2
+ *  seg上文字最大放大比例 默认值为1.5
  */
 @property (nonatomic, assign)   CGFloat maxScale;
 
